@@ -7,7 +7,7 @@
 
 :root {
     --primary-color: #ed174a;
-    /* --secondary-color: #233a95; */
+     --secondary-color: #233a95; 
     --font-color: #363636;
     --text-col-white: #eee;
     --bg-color: #fff;
@@ -51,7 +51,6 @@
 
 }
 
-.header-search-icon {}
 
 .header-search-icon a i {
     font-style: normal;
