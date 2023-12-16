@@ -69,51 +69,61 @@
                         <ul class="navbar-nav">
 
                             <li class="nav-item active mx-1">
-                                <a href="#" class="nav-link nav-navigation-text">HOME</a>
+                                <a href="#" class="nav-link nav-navigation-text ">HOME</a>
                             </li>
 
-                            <li class="nav-item mx-1">
 
+                            <li class="nav-item mx-1">
                                 <div class="dropdown">
 
-                                    <a class="dropdown-toggle nav-link nav-navigation-text" data-bs-toggle="dropdown"
-                                        type="button">Products</a>
+                                    <a class="dropdown-toggle nav-link nav-navigation-text " data-bs-toggle="dropdown"
+                                        type="button">Products <span class="fa-solid fa-angle-down"></span></a>
 
-                                    <div class="dropdown-menu">
+                                    <div class="dropdown-menu nav-product-dropdown-menu overflow-hidden">
 
-                                        <a href="#" class="dropdown-item">
-
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    1
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    3
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    4
-                                                </div>
+                                        <div class="row p-3">
+                                            <div class="col-md-4 nav-product-dropdown-box">
+                                                <ul class="ps-3">
+                                                    <h6>Kitchen</h6>
+                                                    <li><a href="#">Meat & Seafood</a></li>
+                                                    <li><a href="#">Snack Foods <span>New</span></a></li>
+                                                    <li><a href="#">Oils, Vinegars</a></li>
+                                                    <li><a href="#">Pasta & Noodles <span>New</span></a></li>
+                                                </ul>
                                             </div>
-
-
-                                        </a>
+                                            <div class="col-md-4 nav-product-dropdown-box">
+                                                <ul>
+                                                    <h6>Household</h6>
+                                                    <li><a href="#">Deter ents</a></li>
+                                                    <li><a href="#">Floor & Other Cleaners</a></li>
+                                                    <li><a href="#">Pet Care <span>New</span></a></li>
+                                                    <li><a href="#">Festive Decoratives</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 nav-product-dropdown-box">
+                                                <ul>
+                                                    <h5>30% <span>Off/-</span></h5>
+                                                    <li><img src="./res/nav.png" alt=""></li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
-
-
                             </li>
+
 
                             <li class="nav-item mx-1">
                                 <a href="#" class="nav-link nav-navigation-text">About Us</a>
                             </li>
 
+
                             <li class="nav-item mx-1">
 
                                 <div class="dropdown">
 
                                     <a class="dropdown-toggle nav-link nav-navigation-text" data-bs-toggle="dropdown"
-                                        type="button">Pages</a>
+                                        type="button">Pages <span class="fa-solid fa-angle-down"></span></a>
 
                                     <div class="dropdown-menu">
 
@@ -125,9 +135,8 @@
 
                                     </div>
                                 </div>
-
-
                             </li>
+
 
                             <li class="nav-item mx-1">
                                 <a href="#" class="nav-link nav-navigation-text">Contact Us</a>
@@ -178,12 +187,12 @@
 
     <section id="grocery-section" class="py-5">
         <div class="container p-0 grocery-container">
-            <div class="row m-0 justify-content-between">
+            <div class="row m-0 justify-content-lg-around justify-content-center">
 
-                <div class="col-lg-5 ">
-                    <div class="box w-100 h-100 bg-danger grocery-left-box position-relative">
+                <div class="col-md-11 col-lg-5 ">
+                    <div class="box  h-100 bg-danger grocery-left-box position-relative">
                         
-                        <img src="./res/image1.jpg" alt="Grocery">
+                        <img class="h-100" src="./res/image1.jpg" alt="Grocery">
                         <div class="video-btn-animation position-absolute">
                             <a href="#">
                                 <span class="fa-solid fa-play"></span>
@@ -194,10 +203,10 @@
 
 
 
-                <div class="col-lg-7 px-1">
+                <div class="col-md-11 col-lg-7 px-3 px-md-0 mt-lg-0 mt-md-5">
                     <nav class="grocery-menu-nav ">
 
-                        <div class="nav nav-tabs grocery-menu-nav-tab" id="nav-tab" role="tablist">
+                        <div class="nav nav-tabs grocery-menu-nav-tab justify-content-start pt-4 pt-lg-0" id="nav-tab" role="tablist">
 
                             <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-vegetables" type="button" role="tab" aria-controls="vegetables"
@@ -225,7 +234,7 @@
 
                             <div class="row m-0 justify-content-between">
 
-                                <div class="col-md-4  p-1 grocery-tabs-box">
+                                <div class="col-md-12 p-1 grocery-tabs-box">
                                     <a href="#" class="grocery-tabs-box-anchor">
 
                                         <div class="card h-100 grocery-tab-card">
@@ -247,7 +256,7 @@
                                     </a>
                                 </div>
 
-                                <div class="col-md-4  p-1 grocery-tabs-box">
+                                <div class="col-md-12 p-1 grocery-tabs-box">
                                     <a href="#" class="grocery-tabs-box-anchor">
 
                                         <div class="card h-100 grocery-tab-card">
@@ -269,7 +278,7 @@
                                     </a>
                                 </div>
 
-                                <div class="col-md-4  p-1 grocery-tabs-box">
+                                <div class="col-md-12 p-1 grocery-tabs-box">
                                     <a href="#" class="grocery-tabs-box-anchor">
 
                                         <div class="card h-100 grocery-tab-card">
@@ -564,16 +573,16 @@
     <!-- second banner end  -->
 
 
-    <!-- spacial deal-left section  -->
+    <!-- spacial deal section  -->
 
-    <section class="container mb-5 pb-5">
+    <section class="container spacial-deal-container mb-5 pb-5">
         <div class="spacial-deal-section-heading text-center py-5 position-relative">
             <h3>Special Deals</h3>
         </div>
 
         <div class="row m-0 justify-content-between ">
 
-            <div class="col-md-7 overflow-hidden p-0 pe-3">
+            <div class="col-md-7 overflow-hidden p-0 pe-3 pe-sm-0">
                 <div class="row m-0 overflow-hidden">
 
                     <div class="col-12 spacial-deal-left-image-box p-0 mb-4 overflow-hidden position-relative">
@@ -594,7 +603,7 @@
 
             </div>
 
-            <div class="col-md-5 spacial-deal-right-image-box overflow-hidden p-0 pe-2 position-relative">
+            <div class="col-md-5 spacial-deal-right-image-box overflow-hidden p-0 pe-2 pe-sm-0 position-relative">
                 <img class="h-100 " src="./res/bgs4.jpg" alt="image">
                 <div class="spacial-deal-right-text-box position-absolute text-end">
                     <p>
@@ -622,9 +631,9 @@
             <h3>Top Products</h3>
         </div>
 
-        <div class="row">
+        <div class="row m-0 row-gap-2">
 
-            <div class="col-sm-3 p-3 top-product-boxes">
+            <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
                 <a href="#">
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
@@ -648,7 +657,7 @@
             </div>
 
 
-            <div class="col-sm-3 p-3 top-product-boxes">
+            <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
                 <a href="#">
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
@@ -672,7 +681,7 @@
             </div>
 
 
-            <div class="col-sm-3 p-3 top-product-boxes">
+            <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
                 <a href="#">
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
@@ -696,7 +705,7 @@
             </div>
 
 
-            <div class="col-sm-3 p-3 top-product-boxes">
+            <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
                 <a href="#">
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
@@ -720,7 +729,7 @@
             </div>
 
 
-            <div class="col-sm-3 p-3 top-product-boxes">
+            <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
                 <a href="#">
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
@@ -744,7 +753,7 @@
             </div>
 
 
-            <div class="col-sm-3 p-3 top-product-boxes">
+            <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
                 <a href="#">
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
@@ -768,7 +777,7 @@
             </div>
 
 
-            <div class="col-sm-3 p-3 top-product-boxes">
+            <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
                 <a href="#">
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
@@ -792,7 +801,7 @@
             </div>
 
 
-            <div class="col-sm-3 p-3 top-product-boxes">
+            <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
                 <a href="#">
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
@@ -847,14 +856,14 @@
     <!-- newsletter section start  -->
     <section id="newsletter-section">
         <div class="container newsletter-container py-4 px-0 overflow-hidden">
-            <div class="row justify-content-around align-items-center">
+            <div class="row m-0 justify-content-md-between align-items-center justify-content-center">
 
-                <div class="col-md-5 newsletter-left-box ps-0">
+                <div class="col-md-5 newsletter-left-box ps-0 text-sm-center">
                     <h4>Newsletter</h4>
                     <p>Excepteur sint occaecat cupidatat non proident, sunt.</p>
                 </div>
 
-                <div class="col-md-5">
+                <div class="col-md-5 align-content-center">
                     <div class="newsletter-container">
 
                         <form action="#" class="">
@@ -880,9 +889,9 @@
 
     <footer id="footer-section" class="my-5">
         <div class="container overflow-hidden">
-            <div class="row justify-content-between">
+            <div class="row justify-content-lg-between justify-content-sm-around  row-gap-3">
 
-                <div class="col-md-3 contact-box">
+                <div class="col-lg-3 col-6 contact-box">
                     <h4>Contact</h4>
                     <ul class="pt-4">
                         <li><a href="#" style="pointer-events: none"><span class="fa-solid fa-location-dot"></span> London, 235 Terry, 10001</a></li>
@@ -893,7 +902,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-3 info-box">
+                <div class="col-lg-3 col-4 info-box">
                     <h4>Information</h4>
                     <ul class="pt-4">
                         <li><a href="#"><span class="fa fa-angle-right"></span> About Us</a> </li>
@@ -904,7 +913,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-3 category-box">
+                <div class="col-lg-3 col-6 category-box">
                     <h4>Category</h4>
                     <ul class="pt-4">
                         <li><a href="#"><span class="fa fa-angle-right"></span> Fruits & Vegetables</a></li>
@@ -915,7 +924,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-2 profile-box p-0">
+                <div class="col-lg-2 col-4 profile-box p-0">
                     <h4>Profile</h4>
                     <ul class="pt-4">
                         <li><a href="#"><span class="fa fa-angle-right"></span> Home</a></li>
@@ -952,10 +961,10 @@
     navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
     responsive:{
         0:{
-            items:1
+            items:3
         },
         600:{
-            items:2
+            items:3
         },
         1000:{
             items:4
