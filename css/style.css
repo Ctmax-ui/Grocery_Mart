@@ -86,24 +86,86 @@
 }
 
 .nav-navigation-text {
-    padding: 1px 10px !important;
-    font-size: 17px !important;
+    padding: 1px 15px !important;
+    font-size: 16px !important;
     color: #fff !important;
     font-weight: 500;
     text-transform: uppercase;
-
+    border-bottom: 1px solid #ffffff00 !important;
+    border-radius: 5px;
+    transition: all .8s ease;
 }
 
-.collapseable-navbar-menu ul li {
-    border-radius: 6px;
-    border-bottom: 1px solid transparent;
-    transition: all .25s ease-in-out;
+.nav-navigation-text:hover{
+    border-bottom: 1px solid #ffffffcb !important;
+    border-radius: 5px;
 }
 
-.collapseable-navbar-menu ul li:hover {
-    border-bottom: 1px solid rgb(255 255 255 / 62%);
-    margin-top: -1px;
+.dropdown-toggle::after{
+    content: none !important;
 }
+
+
+
+
+
+.nav-product-dropdown-menu{
+    width: 700px !important;
+    left: -250px !important;
+}
+.nav-product-dropdown-box ul{
+    padding: 0;
+}
+.nav-product-dropdown-box ul li{
+    list-style: none;
+}
+
+
+.nav-product-dropdown-box ul h5{
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+}
+.nav-product-dropdown-box ul h5 span{
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+.nav-product-dropdown-box ul h6{
+    width: 100%;
+    box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.2);
+    font-size: 30px;
+    color: var(--secondary-color);
+    margin-bottom: 10px !important;
+    padding-bottom: 10px !important;
+}
+.nav-product-dropdown-box ul li{
+    margin-top: 2px !important;
+}
+.nav-product-dropdown-box ul li a{
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+}
+.nav-product-dropdown-box ul li a span{
+    background-color: red;
+    color: #fff;
+    display: inline-block !important;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    padding: 3px !important;
+}
+
+.nav-product-dropdown-box ul li img{
+    width: 100%;
+}
+
+
+
+
+
+
 
 /* header end here  */
 
@@ -1039,3 +1101,75 @@
     color: white;
     background-color: var(--secondary-color);
 }
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .banner-first-box h2{
+        font-size: 29px;
+        line-height: 1.5;
+    }
+    .grocery-left-box{
+        width: 100% !important;
+    }
+
+    .top-products-container{
+        max-width: 95% !important;
+    }
+
+
+    .product-card-body a{
+        font-size: 15px;
+    }
+    .spacial-deal-container{
+        max-height: fit-content;
+    }
+
+    .spacial-deal-right-image-box{
+        height: min-content;
+    }
+    .spacial-deal-right-image-box img{
+        height: 25rem;
+    }
+}
+@media (max-width: 768px) {
+    .top-product-boxes{
+        padding: 0 !important;
+    }
+
+    .top-products-container{
+        max-width: 90% !important;
+        padding: 0 !important;
+    }
+
+    .second-banner-right{
+        height: 350px;
+    }
+
+
+
+    .spacial-deal-right-image-box{
+        display: flex;
+        justify-content: center;
+    }
+    .spacial-deal-right-image-box img{
+        width: 100%;
+    }
+    .spacial-deal-right-text-box{
+        right: 10%;
+    }
+
+    .newsletter-container{
+        max-width: 80% !important;
+        margin: auto;
+    }
+  }
+  @media (max-width: 576px) {
+    .grocery-menu-nav-tab button {
+        font-size: .8rem;
+        padding: 5px 10px;
+    }
+  }
