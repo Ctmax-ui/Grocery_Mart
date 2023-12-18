@@ -82,11 +82,12 @@
 }
 
 .collapseable-navbar-menu {
+    display: flex;
     justify-content: center;
 }
 
 .nav-navigation-text {
-    padding: 1px 15px !important;
+    padding: 5px 0 !important;
     font-size: 16px !important;
     color: #fff !important;
     font-weight: 500;
@@ -308,7 +309,7 @@
 
 
 .grocery-tabs-box {
-    width: 32% !important;
+    /* width: 32% !important; */
 }
 
 .card-images-box img {
@@ -570,8 +571,8 @@
 
 
 
-.spacial-deal-left-text-box-one{
-    bottom: 40px;
+.spacial-deal-left-text-box-one, .spacial-deal-left-text-box-two{
+    top: 30%;
     left: 15%;
 }
 .spacial-deal-left-text-box-one p::before{
@@ -581,17 +582,14 @@
 }
 .spacial-deal-left-text-box-one p{
     color: var(--text-col-white);
-    font-size: 35px;
+    font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
     padding-left: 20px;
 }
 
 
-.spacial-deal-left-text-box-two {
-    bottom: 40px;
-    left: 15%;
-}
+ 
 .spacial-deal-left-text-box-two p::before{
     content: "Best Store";
     margin-left: -40px;
@@ -625,23 +623,27 @@
 
 .spacial-deal-left-image-box {
     border-radius: 12px !important;
-    border: 5px solid transparent;
+    /* height: 400px !important; */
 }
 
 
 .spacial-deal-left-image-box img{
     transition: all 1s ease;
     width: 100%;
+    height: auto;
 }
 .spacial-deal-left-image-box:hover.spacial-deal-left-image-box img{
     transform: scale3d(1.1, 1.1, 1);
 }
 
 
-
+.spacial-deal-right-image-box{
+    width: 39% !important;
+}
 
 .spacial-deal-right-image-box img{
     border-radius: 12px;
+    height: 100%;
     
 }
 .spacial-deal-right-text-box{
@@ -1114,12 +1116,27 @@
 
     }
     .collapseable-navbar-menu ul{
-        width: fit-content;
-        justify-content: center;
+        width: auto;
+        
     }
     .collapseable-navbar-menu ul li{
         width: fit-content;
+        
     }
+
+
+    .nav-product-dropdown-menu{
+        width: fit-content !important;
+    }
+
+    .nav-product-dropdown-box ul {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+.nav-product-dropdown-box ul li{
+    margin: auto !important;
+}
+
 
 
     .banner-first-box h2{
@@ -1175,8 +1192,8 @@
 
 
     .spacial-deal-right-image-box{
-        display: flex;
-        justify-content: center;
+        margin-top: 25px !important;
+        width: 100% !important;
     }
     .spacial-deal-right-image-box img{
         width: 100%;
@@ -1204,6 +1221,12 @@
 
 
   @media (max-width: 576px) {
+    .site-brand-text a h1{
+        font-size: 1.5rem;
+    }
+
+
+
     .grocery-menu-nav-tab button {
         font-size: .8rem;
         padding: 5px 10px;
@@ -1236,6 +1259,10 @@
 
 
   @media (max-width: 350px) {
+    .site-brand-text a h1{
+        font-size: 1rem;
+    }
+
 
     .second-banner-left-text-box h3{
         font-size: 1.8rem;
@@ -1249,15 +1276,18 @@
     }
 
 
-    .spacial-deal-left-text-box-one{
+    .spacial-deal-left-text-box-one, .spacial-deal-left-text-box-two{
         position: relative !important;
         top: 10px;
         right: 0;
     }
-    .spacial-deal-left-text-box-one p{
+    .spacial-deal-left-text-box-one p, .spacial-deal-left-text-box-two p{
         margin: 0;
         font-size: 15px;
 
+    }
+    .spacial-deal-left-image-box{
+        height: 112px !important;
     }
     .spacial-deal-left-image-box span{
         display: none;
@@ -1266,4 +1296,6 @@
     .spacial-deal-right-text-box p, .spacial-deal-right-text-box p span{
         font-size: 1.5rem !important;
     }
+    
+    
   }
