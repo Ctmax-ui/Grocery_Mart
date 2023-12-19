@@ -58,7 +58,7 @@
 
         </section>
 
-        <div class="container-fluid site-navigation-header py-3">
+        <div class="container-fluid site-navigation-header py-4">
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
                     <button class="navbar-toggler bg-danger px-2" type="button" data-bs-toggle="collapse"
@@ -70,14 +70,14 @@
                         <ul class="navbar-nav text-center">
 
                             <li class="nav-item active mx-auto ">
-                                <a href="#" class="nav-link nav-navigation-text px-lg-3 ">HOME</a>
+                                <a href="#" class="nav-link nav-navigation-text text-white px-lg-3 ">HOME</a>
                             </li>
 
 
                             <li class="nav-item mx-auto">
                                 <div class="dropdown">
 
-                                    <a class="dropdown-toggle nav-link nav-navigation-text px-lg-3 " data-bs-toggle="dropdown"
+                                    <a class="dropdown-toggle nav-link nav-navigation-text text-white px-lg-3 " data-bs-toggle="dropdown"
                                         type="button">Products <span class="fa-solid fa-angle-down"></span></a>
 
                                     <div class="dropdown-menu nav-product-dropdown-menu overflow-hidden p-0 p-lg-3">
@@ -115,7 +115,7 @@
 
 
                             <li class="nav-item m-auto">
-                                <a href="#" class="nav-link nav-navigation-text px-lg-3">About Us</a>
+                                <a href="#" class="nav-link nav-navigation-text text-white px-lg-3">About Us</a>
                             </li>
 
 
@@ -123,7 +123,7 @@
 
                                 <div class="dropdown">
 
-                                    <a class="dropdown-toggle nav-link nav-navigation-text px-lg-3" data-bs-toggle="dropdown"
+                                    <a class="dropdown-toggle nav-link nav-navigation-text text-white px-lg-3" data-bs-toggle="dropdown"
                                         type="button">Pages <span class="fa-solid fa-angle-down"></span></a>
 
                                     <div class="dropdown-menu">
@@ -140,7 +140,7 @@
 
 
                             <li class="nav-item m-auto">
-                                <a href="#" class="nav-link nav-navigation-text px-lg-3">Contact Us</a>
+                                <a href="#" class="nav-link nav-navigation-text text-white px-lg-3">Contact Us</a>
                             </li>
 
                         </ul>
@@ -944,7 +944,7 @@
         </div>
     </footer>
 
-
+<div class="text-black"></div>
 
 
     <script src="./js/jquery.js"></script>
@@ -972,6 +972,35 @@
     }
 })
 
+    </script>
+
+    <script>
+        const headerSection = document.querySelector(".section-first-header");
+        console.log(headerSection);
+
+        const mainNav = document.querySelector(".site-navigation-header");
+        const mainNavText = document.querySelectorAll(".nav-navigation-text");
+
+        const observeSect = new IntersectionObserver((entities)=>{
+            // console.log(entities[0].isIntersecting);
+
+            mainNav.classList.toggle("fixed-top", !entities[0].isIntersecting);
+            mainNav.classList.toggle("bg-white", !entities[0].isIntersecting);
+
+            console.log(mainNav);
+            mainNavText.forEach(element => {
+                element.classList.toggle("red-nav", !entities[0].isIntersecting);
+                mainNav.classList.toggle("pt-3", !entities[0].isIntersecting);
+                mainNav.classList.toggle("pb-3", !entities[0].isIntersecting);
+                element.classList.toggle("text-white", entities[0].isIntersecting);
+                element.classList.toggle("text-black", !entities[0].isIntersecting);
+            });
+
+        }, {/*rootMargin: "1px"*/});     
+
+
+        observeSect.observe(headerSection);
+        
     </script>
 </body>
 
