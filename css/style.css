@@ -25,34 +25,44 @@
 }
 .user-modal{
     position: fixed;
-    height: 100%;
+    height: 120%;
     width: 100%;
     background-color: #0000004f;
     z-index: 99999;
-    display: none;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translatey(-50px);
+    transition: all .3s ease;
+}
+.user-modal-show{
+    visibility: unset;
+    pointer-events: all;
+    transform: translatey(0);
 }
 .user-modal-box{
     position: fixed;
     border-radius: 5px;
     background-color: #fff;
     height: auto;
-    width: 800px;
-    top: 50%;
+    width: auto;
+    top: 5%;
     transform: translateY(-50%);
-    left: 25%;
+     left: 50%;
+    transform: translateX(-50%); 
+
 }
 .zx-tab-btn-group {
     display: flex;
     justify-content: left;
     width: max-content;
     width: 100%;
-    padding: 40px 30px;
+    padding: 40px 30px 0 30px;
 }
 
 .zx-btn {
-    margin-right: 20px;
+    /* margin-right: 20px; */
     padding: 10px 30px;
-    font-size: 23px;
+    font-size: 18px;
     text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer;
@@ -92,25 +102,99 @@
     padding-top: 10px;
 }
 
-.form-control{
+.user-modal-form{
     padding: 30px 0 !important;
+    width: fit-content !important;
+
 }
 
-.form-control input{
+.user-modal-form input{
     width: 100%;
-    height: 50px;
-    margin-bottom: 30px;
-    font-size: 1.5rem;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
     padding-left: 10px;
     border-radius: 5px;
+    border: 2px solid #00000038;
 }
-.form-control input::placeholder{
-    font-size: 1.2rem;
+.user-modal-form input::placeholder{
+    font-size: 1rem;
 }
-.form-control button{
-    height: 55px !important;
+.user-modal-form button{
+    height: 50px !important;
     font-size: 20px;
 }
+
+
+
+/* <!-- 2 user search modal  --> */
+.search-modal-container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #0000004f;
+    z-index: 99999;
+    display: none;
+}
+.search-modal-box{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.search-input{
+    width: 400px !important;
+    height: 100px;
+    font-size: 2.5rem !important;
+}
+.search-input::placeholder{
+    font-size: 1.5rem;
+}
+
+.btn-red{
+    background-color: var(--primary-color) !important;
+    /* padding: 30px !important; */
+}
+.btn-red:hover{
+    background-color: var(--secondary-color) !important;
+}
+.btn-red i{
+    font-size: 30px !important;
+    font-weight: 900;
+    color: var(--text-col-white);
+}
+
+
+
+/* Items cart section  */
+
+.items-cart-container{
+    display: none ;
+    position: fixed;
+    z-index: 99999;
+    width: 500px;
+    right: 10px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 7px 3px #000;
+}
+.items-cart-box{
+   padding: 20px;
+   background-color: #bd7373;
+}
+.items-cart-close-icn{
+    margin: 10px;
+    transition: all .4s ease;
+}
+.items-cart-close-icn:hover{
+    color: var(--primary-color) !important;
+    scale: 1.2;
+    border: 1px solid var(--primary-color) !important;
+}
+
 
 
 /* header start here  */
@@ -185,7 +269,7 @@
 
 .nav-navigation-text {
     padding: 5px 0 2px 0 !important;
-    font-size: 21px !important;
+    font-size: 16px !important;
     color: #fff ;
     font-weight: 500;
     text-transform: uppercase;

@@ -17,33 +17,50 @@
 <body>
 
     <div class="all-modal-container position-relative ">
-
+        <!-- 1 user login page modal  -->
         <div class="user-modal">
-            <div class="user-modal-box">
-                <div class="zx-tab-btn-group">
+            <div class="user-modal-box ">
+                <div class="zx-tab-btn-group d-flex justify-content-around">
                     <button class="zx-btn btn-hide btn-show" data-fortab="1">Login</button>
                     <button class="zx-btn btn-hide" data-fortab="2">Register</button>
                 </div>
 
-                <div class="zx-tab-menu">
+                <div class="zx-tab-menu d-flex justify-content-center mb-2">
                     <div class="zx-tabs zx-tabs-hidden zx-tabs-show" data-tab="1">
-                        <form action="#" class="form-control d-grid justify-content-center">
-                            <input type="email" class="" required placeholder="Email">
-                            <input type="password" class="" required placeholder="Password">
-                            <button type="submit" class="btn btn-outline-dark d-block">Submit</button>
+                        <form action="#" class="form-control needs-validation user-modal-form p-5 d-grid justify-content-center">
+                            <input type="email" class="has-validation" required placeholder="Email" >
+                        
+                            <input type="password" placeholder="Password" required>
+                            
+                            <a href="#" class="card-link pb-2 pt-2">Forgot Password</a>
+                            <button type="submit" class="btn btn-outline-dark d-block">Log In</button>
                         </form>
                     </div>
                     <div class="zx-tabs zx-tabs-hidden " data-tab="2">
-                        <form action="#" class="form-control d-grid justify-content-center">
+                        <form action="#" class="form-control user-modal-form p-5 d-grid justify-content-center">
                             <input type="email" class="" required placeholder="Create Username">
-                            <input type="email" class="" required placeholder="Type Your Email">
-                            <input type="password" class="" required placeholder="Create a Password">
-                            <button type="submit" class="btn btn-outline-dark d-block">Submit</button>
+                            <input type="email" class="" required placeholder="Email Address">
+                            <input type="password" class="" required placeholder="Password">
+                            <input type="password" class="" required placeholder="Confirm Password">
+                            <button type="submit" class="btn btn-outline-dark d-block">Create Account</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- 2 user search modal  -->
+        <div class="search-modal-container">
+            <div class="search-modal-box">
+                <div class="input-group w-auto">
+                    <input type="text" class="form-control search-input" placeholder="Search">
+                    <button class="btn btn-red px-4" type="button"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+        </div>
+
+
     </div>
 
 
@@ -71,15 +88,22 @@
                         <div class="row justify-content-start justify-content-sm-end m-0">
 
                             <div class="col-3 header-search-icon p-0 pt-2">
-                                <a href="#" class="">
+                                <a href="#" class="search-modal-btn">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
 
-                            <div class="col-5 header-shop-icon p-0">
-                                <a href="#">
+                            <div class="col-5 header-shop-icon p-0 position-relative">
+                                <a href="#" class="items-cart-btn">
                                     <i class="fa fa-shopping-bag fw-bolder"></i>
                                 </a>
+                                <!-- 3 cart box -->
+                                <div class="items-cart-container">
+                                    <button class="btn items-cart-close-icn"><i class="fa fa-x"></i></button>
+                                    <div class="items-cart-box">
+                                        
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -91,7 +115,7 @@
 
         <div class="container-fluid site-navigation-header py-4">
             <div class="container">
-                <nav class="navbar navbar-expand-lg">
+                <nav class="navbar navbar-expand-lg p-0">
                     <button class="navbar-toggler bg-danger px-2" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navCollapse">
                         <i class="fa fa-bars text-light"></i>
@@ -133,7 +157,7 @@
                                                     <li><a href="#">Festive Decoratives</a></li>
                                                 </ul>
                                             </div>
-                                            <div class=" col-lg-4 col-10  nav-product-dropdown-box">
+                                            <div class=" col-lg-4 col-10  nav-product-dropdown-box d-none d-lg-block">
                                                 <ul>
                                                     <h5>30% <span>Off/-</span></h5>
                                                     <li class="m-auto"><img src="./res/nav.png" alt=""></li>
