@@ -16,6 +16,37 @@
 
 <body>
 
+    <div class="all-modal-container position-relative ">
+
+        <div class="user-modal">
+            <div class="user-modal-box">
+                <div class="zx-tab-btn-group">
+                    <button class="zx-btn btn-hide btn-show" data-fortab="1">Login</button>
+                    <button class="zx-btn btn-hide" data-fortab="2">Register</button>
+                </div>
+
+                <div class="zx-tab-menu">
+                    <div class="zx-tabs zx-tabs-hidden zx-tabs-show" data-tab="1">
+                        <form action="#" class="form-control d-grid justify-content-center">
+                            <input type="email" class="" required placeholder="Email">
+                            <input type="password" class="" required placeholder="Password">
+                            <button type="submit" class="btn btn-outline-dark d-block">Submit</button>
+                        </form>
+                    </div>
+                    <div class="zx-tabs zx-tabs-hidden " data-tab="2">
+                        <form action="#" class="form-control d-grid justify-content-center">
+                            <input type="email" class="" required placeholder="Create Username">
+                            <input type="email" class="" required placeholder="Type Your Email">
+                            <input type="password" class="" required placeholder="Create a Password">
+                            <button type="submit" class="btn btn-outline-dark d-block">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <header class="">
 
         <section class="section-first-header bg-white">
@@ -24,7 +55,7 @@
                 <div class="row justify-content-between m-0">
 
                     <div class="col-2 header-user-icon mt-2 p-0">
-                        <a href="#">
+                        <a href="#" class="user-login-modal">
                             <i class="fa fa-user"></i>
                         </a>
                     </div>
@@ -77,12 +108,13 @@
                             <li class="nav-item mx-auto">
                                 <div class="dropdown">
 
-                                    <a class="dropdown-toggle nav-link nav-navigation-text text-white px-lg-3 " data-bs-toggle="dropdown"
-                                        type="button">Products <span class="fa-solid fa-angle-down"></span></a>
+                                    <a class="dropdown-toggle nav-link nav-navigation-text text-white px-lg-3 "
+                                        data-bs-toggle="dropdown" type="button">Products <span
+                                            class="fa-solid fa-angle-down"></span></a>
 
                                     <div class="dropdown-menu nav-product-dropdown-menu overflow-hidden p-0 p-lg-3">
 
-                                        <div class="row nav-product-dropdown-row m-0 justify-content-center ">
+                                        <div class="row nav-product-dropdown-row m-0 justify-content-center">
                                             <div class=" col-lg-4 col-10  nav-product-dropdown-box">
                                                 <ul class="">
                                                     <h6>Kitchen</h6>
@@ -123,8 +155,9 @@
 
                                 <div class="dropdown">
 
-                                    <a class="dropdown-toggle nav-link nav-navigation-text text-white px-lg-3" data-bs-toggle="dropdown"
-                                        type="button">Pages <span class="fa-solid fa-angle-down"></span></a>
+                                    <a class="dropdown-toggle nav-link nav-navigation-text text-white px-lg-3"
+                                        data-bs-toggle="dropdown" type="button">Pages <span
+                                            class="fa-solid fa-angle-down"></span></a>
 
                                     <div class="dropdown-menu">
 
@@ -192,7 +225,7 @@
 
                 <div class="col-md-11 col-lg-5 ">
                     <div class="box  h-100 bg-danger grocery-left-box position-relative">
-                        
+
                         <img class="h-100" src="./res/image1.jpg" alt="Grocery">
                         <div class="video-btn-animation position-absolute">
                             <a href="#">
@@ -207,21 +240,22 @@
                 <div class="col-md-11 col-lg-7 px-3 px-md-0 mt-lg-0 mt-md-5">
                     <nav class="grocery-menu-nav ">
 
-                        <div class="nav nav-tabs grocery-menu-nav-tab justify-content-start pt-4 pt-lg-0" id="nav-tab" role="tablist">
+                        <div class="nav nav-tabs grocery-menu-nav-tab justify-content-start pt-4 pt-lg-0" id="nav-tab"
+                            role="tablist">
 
-                            <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab"
+                            <button class="nav-link active me-2" id="nav-home-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-vegetables" type="button" role="tab" aria-controls="vegetables"
                                 aria-selected="true">vegetables</button>
 
-                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                            <button class="nav-link me-2" id="nav-profile-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-meats" type="button" role="tab" aria-controls="nav-profile"
                                 aria-selected="false">Meats & Seafood</button>
 
-                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                            <button class="nav-link me-2" id="nav-contact-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-bakery" type="button" role="tab" aria-controls="nav-contact"
                                 aria-selected="false">Bakery</button>
 
-                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                            <button class="nav-link me-2" id="nav-contact-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-beverages" type="button" role="tab" aria-controls="nav-contact"
                                 aria-selected="false">Beverages</button>
                         </div>
@@ -508,33 +542,33 @@
 
                                 <div class=" col-sm-4 col-10 m-auto p-1 grocery-tabs-box overflow-hidden">
                                     <a href="#" class="grocery-tabs-box-
-                                        <div class="card h-100 grocery-tab-card">
-                                            <div class="card-images-box position-relative   overflow-hidden ">
-                                                <div class="slider-shadow-box position-absolute z-3"></div>
-                                                <div class="slider-preview-box position-absolute z-3 text-center pt-2">
-                                                    <i class="fa fa-eye"></i>
-                                                </div>
-                                                <img src="./res/d3.png" alt="">
+                                        <div class=" card h-100 grocery-tab-card">
+                                        <div class="card-images-box position-relative   overflow-hidden ">
+                                            <div class="slider-shadow-box position-absolute z-3"></div>
+                                            <div class="slider-preview-box position-absolute z-3 text-center pt-2">
+                                                <i class="fa fa-eye"></i>
                                             </div>
-
-                                            <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">KARACHI Fruit Cookies</a>
-                                                <p><span>$520</span> $50</p>
-                                                <a class="btn grocery-card-button">Add To Cart</a>
-                                            </div>
-
+                                            <img src="./res/d3.png" alt="">
                                         </div>
-                                    </a>
+
+                                        <div class="card-body grocery-card-body text-center">
+                                            <a href="#" class="card-link text-center">KARACHI Fruit Cookies</a>
+                                            <p><span>$520</span> $50</p>
+                                            <a class="btn grocery-card-button">Add To Cart</a>
+                                        </div>
+
                                 </div>
-
-
+                                </a>
                             </div>
-                        </div>
 
+
+                        </div>
                     </div>
 
                 </div>
+
             </div>
+        </div>
         </div>
     </section>
 
@@ -846,7 +880,7 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
     </section>
     <!-- top brands logo section end -->
 
@@ -871,8 +905,8 @@
                             <div class="form-group d-flex newsletter-form-box justify-content-center ">
                                 <input type="email" class="form-control form-control-lg " id="input-email"
                                     placeholder="Email" required>
-                                <button class="btn bgcorange-w-but font-weight-bold m-0"
-                                    type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                                <button class="btn bgcorange-w-but font-weight-bold m-0" type="submit"><i
+                                        class="fa-solid fa-paper-plane"></i></button>
                             </div>
                         </form>
 
@@ -894,7 +928,8 @@
                 <div class="col-lg-3 col-md-6 col-10 contact-box">
                     <h4>Contact</h4>
                     <ul class="pt-4">
-                        <li><a href="#" style="pointer-events: none"><span class="fa-solid fa-location-dot"></span> London, 235 Terry, 10001</a></li>
+                        <li><a href="#" style="pointer-events: none"><span class="fa-solid fa-location-dot"></span>
+                                London, 235 Terry, 10001</a></li>
                         <li><a href="mailto:info@example.com"><span class="fas fa-envelope-open-text"></span>
                                 info@example.com</a></li>
                         <li><a href="tel:++44-000-888-999"><span class="fa-solid fa-phone"></span> ++44-000-888-999</a>
@@ -904,7 +939,7 @@
 
                 <div class="col-lg-3 col-md-4 col-10 info-box">
                     <h4>Information</h4>
-                    <ul class="pt-4">
+                    <ul class="pt-3">
                         <li><a href="#"><span class="fa fa-angle-right"></span> About Us</a> </li>
                         <li><a href="#"><span class="fa fa-angle-right"></span> Contact Us</a></li>
                         <li><a href="#"><span class="fa fa-angle-right"></span> Shortcodes</a></li>
@@ -915,7 +950,7 @@
 
                 <div class="col-lg-3 col-md-6 col-10 category-box">
                     <h4>Category</h4>
-                    <ul class="pt-4">
+                    <ul class="pt-3">
                         <li><a href="#"><span class="fa fa-angle-right"></span> Fruits & Vegetables</a></li>
                         <li><a href="#"><span class="fa fa-angle-right"></span> Meats & Seafood</a></li>
                         <li><a href="#"><span class="fa fa-angle-right"></span> Bakery & Pastry</a></li>
@@ -926,7 +961,7 @@
 
                 <div class="col-lg-2 col-md-4 col-10 profile-box p-0">
                     <h4>Profile</h4>
-                    <ul class="pt-4">
+                    <ul class="pt-3">
                         <li><a href="#"><span class="fa fa-angle-right"></span> Home</a></li>
                         <li><a href="#"><span class="fa fa-angle-right"></span> Today's Deals</a></li>
                     </ul>
@@ -944,64 +979,13 @@
         </div>
     </footer>
 
-<div class="text-black"></div>
 
 
     <script src="./js/jquery.js"></script>
     <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/index.js"></script>
 
-    <script>//for the carousel
-        $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    autoplay:true,
-    autoplayTimeout: 2000,
-    navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-    responsive:{
-        0:{
-            items:3
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:4
-        }
-    }
-})
-
-    </script>
-
-    <script>
-        const headerSection = document.querySelector(".section-first-header");
-        console.log(headerSection);
-
-        const mainNav = document.querySelector(".site-navigation-header");
-        const mainNavText = document.querySelectorAll(".nav-navigation-text");
-
-        const observeSect = new IntersectionObserver((entities)=>{
-            // console.log(entities[0].isIntersecting);
-
-            mainNav.classList.toggle("fixed-top", !entities[0].isIntersecting);
-            mainNav.classList.toggle("bg-white", !entities[0].isIntersecting);
-
-            console.log(mainNav);
-            mainNavText.forEach(element => {
-                element.classList.toggle("red-nav", !entities[0].isIntersecting);
-                mainNav.classList.toggle("pt-3", !entities[0].isIntersecting);
-                mainNav.classList.toggle("pb-3", !entities[0].isIntersecting);
-                element.classList.toggle("text-white", entities[0].isIntersecting);
-                element.classList.toggle("text-black", !entities[0].isIntersecting);
-            });
-
-        }, {/*rootMargin: "1px"*/});     
-
-
-        observeSect.observe(headerSection);
-        
-    </script>
 </body>
 
 </html>
