@@ -183,7 +183,9 @@
 }
 .items-cart-box{
    padding: 20px;
-   background-color: #bd7373;
+   /* background-color: #bd7373; */
+   max-height: 200px;
+   overflow-y: auto;
 }
 .items-cart-close-icn{
     margin: 10px;
@@ -194,6 +196,7 @@
     scale: 1.2;
     border: 1px solid var(--primary-color) !important;
 }
+
 
 
 
