@@ -1,0 +1,26 @@
+
+
+
+.cart-rows td input{
+    width: 45px !important;
+    outline: none;
+    border: none;
+    text-align: center;
+}
+
+.items-cart-box table tr{
+    text-align: center;
+}
+.cart-rows td button{
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    background-color: #ed5417;
+    color: #fff;
+    border: none;
+    transition: all .3s ease;
+}
+.cart-rows td button:hover{
+    background-color: #ed174a;
+}
+

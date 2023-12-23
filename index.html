@@ -8,10 +8,16 @@
 
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Items-cart.css">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- the store js will load with the body using "async" -->
+    <script type="module" src="./js/Store.js" async></script> 
+
 </head>
 
 <body>
@@ -101,34 +107,48 @@
      
      
                                 <!------------------- 3 cart box -------------------------------->
-                                <div class="items-cart-container d-block">
-                                    <button class="btn items-cart-close-icn"><i class="fa fa-x"></i></button>
-                                    <div class="items-cart-box">
-                                        <table class="table">
-                                            <tr>
-                                              <th scope="col">Product</th>
-                                              <th scope="col">Items</th>
-                                              <th scope="col">Price</th>
+                                <div class="items-cart-container ">
+                                    
+                                    <button class="btn items-cart-close-icn float-end me-3"><i class="fa fa-x"></i></button>
+                                    <p class="text-center h4 fw-bold float-start pt-3 ps-4 text-dark">Your Cart</p>
+                                    <table class="table p-2">
+                                        <tr>
+                                          <th>All Products</th>
+                                          <th>Item Price</th>
+                                          <th>Total Quantity</th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="items-main-wraper">
+
+                                        <table class="table items-cart-box">
+
+                                            
+                                        <tr class="cart-rows">
+                                                <td class="cart-item-title">Snaks</td>
+                                                <td class="cart-price">$20</td>
+                                                <td><Button class="cart-remove-btn">Remove</Button></td>
+                                                <td><input class="cart-quantity-input" type="number" value="1" min="0" max="99" ></td>
                                             </tr>
 
-                                     
+                                            
                                             <!-- the JS code  -->
-                                       
-                                          </table>
 
-                                          <table class="table text-center">
-                                            <tr>
-                                                <th scope="col">All</th>
-                                                <th scope="col">Total Items</th>
-                                                <th scope="col">Total Price</th>
-                                              </tr>
-                                              <tr>
-                                                  <td>2</td>
-                                                  <td>2</td>
-                                                  <td>600$</td>
-                                              </tr>
-                                          </table>  
-                                    </div>
+                                        </table>
+
+                                        </div>
+                                        <table class="table text-center">
+                                          <tr>
+                                              <!-- <th scope="col">All</th> -->
+                                              
+                                              <th scope="col">Total Price</th>
+                                            </tr>
+                                            
+                                                <!-- <td>2</td> -->
+                                                
+                                                <td class="final-items-price">$000</td>
+                                            </tr>
+                                        </table>  
                                 </div>
                                 <!----------------------------------------------------------->
                             </div>
@@ -333,7 +353,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">Ladies Finger 500g</a>
+                                                <a href="#" class="card-link text-center cart-item-text">Ladies Finger 500g</a>
                                                 <p><span>$380</span> $350</p>
                                                 <a class="btn grocery-card-button" data-items="ladiesFinger">Add To Cart</a>
                                             </div>
@@ -355,7 +375,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">Brinjal long 500g</a>
+                                                <a href="#" class="card-link text-center cart-item-text">Brinjal long 500g</a>
                                                 <p><span>$330</span> $300</p>
                                                 <a class="btn grocery-card-button" data-items="brinjalLong">Add To Cart</a>
                                             </div>
@@ -377,7 +397,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">Palak 250g</a>
+                                                <a href="#" class="card-link text-center cart-item-text">Palak 250g</a>
                                                 <p><span>$250</span> $245</p>
                                                 <a class="btn grocery-card-button" data-items="palak">Add To Cart</a>
                                             </div>
@@ -407,7 +427,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">Prawns (Big)</a>
+                                                <a href="#" class="card-link text-center cart-item-text">Prawns (Big)</a>
                                                 <p><span>$320</span> $250</p>
                                                 <a class="btn grocery-card-button" data-items="prawnsMeatBig">Add To Cart</a>
                                             </div>
@@ -431,7 +451,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">Silver Belly Fish</a>
+                                                <a href="#" class="card-link text-center cart-item-text">Silver Belly Fish</a>
                                                 <p><span>$180</span> $150</p>
                                                 <a class="btn grocery-card-button" data-items="silverBellyFish">Add To Cart</a>
                                             </div>
@@ -453,7 +473,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">Prawns Meat(Small)</a>
+                                                <a href="#" class="card-link text-center cart-item-text">Prawns Meat(Small)</a>
                                                 <p><span>$220</span> $180</p>
                                                 <a class="btn grocery-card-button" data-items="prawnsMeatSmall">Add To Cart</a>
                                             </div>
@@ -484,7 +504,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">Pista Soan Papdi</a>
+                                                <a href="#" class="card-link text-center cart-item-text">Pista Soan Papdi</a>
                                                 <p><span>$880</span> $850</p>
                                                 <a class="btn grocery-card-button" data-items="pistaSoanPapdi">Add To Cart</a>
                                             </div>
@@ -507,7 +527,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">KARACHI Halwa Box</a>
+                                                <a href="#" class="card-link text-center cart-item-text">KARACHI Halwa Box</a>
                                                 <p><span>$290</span> $280</p>
                                                 <a class="btn grocery-card-button" data-items="karachiHalwaBox">Add To Cart</a>
                                             </div>
@@ -529,7 +549,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">KARACHI Fruit Cookies</a>
+                                                <a href="#" class="card-link text-center cart-item-text">KARACHI Fruit Cookies</a>
                                                 <p><span>$120</span> $80</p>
                                                 <a class="btn grocery-card-button" data-items="karachiFruitCookies">Add To Cart</a>
                                             </div>
@@ -560,7 +580,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">Thums Up Soft drink</a>
+                                                <a href="#" class="card-link text-center cart-item-text">Thums Up Soft drink</a>
                                                 <p><span>$950</span> $90</p>
                                                 <a class="btn grocery-card-button" data-items="thumsUpSoftDrink">Add To Cart</a>
                                             </div>
@@ -582,7 +602,7 @@
                                             </div>
 
                                             <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center">Coca-Cola Can</a>
+                                                <a href="#" class="card-link text-center cart-item-text">Coca-Cola Can</a>
                                                 <p><span>$700</span> $80</p>
                                                 <a class="btn grocery-card-button" data-items="cocaColaCan">Add To Cart</a>
                                             </div>
@@ -603,8 +623,8 @@
                                         </div>
 
                                         <div class="card-body grocery-card-body text-center">
-                                            <a href="#" class="card-link text-center">Fanta Soft Drink</a>
-                                            <p><span>$520</span> $50</p>
+                                            <a href="#" class="card-link text-center cart-item-text">Fanta Soft Drink</a>
+                                            <p><span>$520</span> $500</p>
                                             <a class="btn grocery-card-button" data-items="fantaSoftDrink">Add To Cart</a>
                                         </div>
 
@@ -730,10 +750,10 @@
                             <img src="./res/product/ee1.png" alt="" class="img-fluid product-box-img-two">
                         </div>
 
-                        <div class="card-body product-card-body text-center">
-                            <a href="#" class="card-link text-center pt-2">ProV Pistachios</a>
+                        <div class="card-body product-card-body text-center grocery-card-body">
+                            <a href="#" class="card-link text-center pt-2 cart-item-text">ProV Pistachios</a>
                             <p><span>$520</span> $500</p>
-                            <a class="btn product-card-button">Add To Cart</a>
+                            <a class="btn product-card-button grocery-card-button grocery-card-button" data-items="ProV Pistachios">Add To Cart</a>
 
                         </div>
                     </div>
@@ -754,10 +774,10 @@
                             <img src="./res/product/ee2.png" alt="" class="img-fluid product-box-img-two">
                         </div>
 
-                        <div class="card-body product-card-body text-center">
-                            <a href="#" class="card-link text-center pt-2">Himalayan Cashews</a>
+                        <div class="card-body product-card-body text-center grocery-card-body">
+                            <a href="#" class="card-link text-center pt-2 cart-item-text">Himalayan Cashews</a>
                             <p><span>$380</span> $370</p>
-                            <a class="btn product-card-button">Add To Cart</a>
+                            <a class="btn product-card-button grocery-card-button" data-items="HimalayanCashews">Add To Cart</a>
 
                         </div>
                     </div>
@@ -778,10 +798,10 @@
                             <img src="./res/product/ee3.png" alt="" class="img-fluid product-box-img-two">
                         </div>
 
-                        <div class="card-body product-card-body text-center">
-                            <a href="#" class="card-link text-center pt-2">Kernels Walnuts</a>
+                        <div class="card-body product-card-body text-center grocery-card-body">
+                            <a href="#" class="card-link text-center pt-2 cart-item-text">Kernels Walnuts</a>
                             <p><span>$150</span> $100</p>
-                            <a class="btn product-card-button">Add To Cart</a>
+                            <a class="btn product-card-button grocery-card-button" data-items="KernelsWalnuts">Add To Cart</a>
 
                         </div>
                     </div>
@@ -802,10 +822,10 @@
                             <img src="./res/product/ee4.png" alt="" class="img-fluid product-box-img-two">
                         </div>
 
-                        <div class="card-body product-card-body text-center">
-                            <a href="#" class="card-link text-center pt-2">Himalayan Almonds</a>
+                        <div class="card-body product-card-body text-center grocery-card-body">
+                            <a href="#" class="card-link text-center pt-2 cart-item-text">Himalayan Almonds</a>
                             <p><span>$280</span> $250</p>
-                            <a class="btn product-card-button">Add To Cart</a>
+                            <a class="btn product-card-button grocery-card-button" data-items="HimalayanAlmonds">Add To Cart</a>
 
                         </div>
                     </div>
@@ -826,10 +846,10 @@
                             <img src="./res/product/f11.png" alt="" class="img-fluid product-box-img-two">
                         </div>
 
-                        <div class="card-body product-card-body text-center">
-                            <a href="#" class="card-link text-center pt-2">Yellow Arhar Dal</a>
+                        <div class="card-body product-card-body text-center grocery-card-body">
+                            <a href="#" class="card-link text-center pt-2 cart-item-text">Yellow Arhar Dal</a>
                             <p><span>$40</span> $30</p>
-                            <a class="btn product-card-button">Add To Cart</a>
+                            <a class="btn product-card-button grocery-card-button" data-items="YellowArharDal">Add To Cart</a>
 
                         </div>
                     </div>
@@ -850,10 +870,10 @@
                             <img src="./res/product/f22.png" alt="" class="img-fluid product-box-img-two">
                         </div>
 
-                        <div class="card-body product-card-body text-center">
-                            <a href="#" class="card-link text-center pt-2">Tata Sampann Poha</a>
+                        <div class="card-body product-card-body text-center grocery-card-body">
+                            <a href="#" class="card-link text-center pt-2 cart-item-text">Tata Sampann Poha</a>
                             <p><span>$280</span> $170</p>
-                            <a class="btn product-card-button">Add To Cart</a>
+                            <a class="btn product-card-button grocery-card-button" data-items="TataSampannPoha">Add To Cart</a>
 
                         </div>
                     </div>
@@ -874,10 +894,10 @@
                             <img src="./res/product/f33.png" alt="" class="img-fluid product-box-img-two">
                         </div>
 
-                        <div class="card-body product-card-body text-center">
-                            <a href="#" class="card-link text-center pt-2">Lay's Onion Chips</a>
+                        <div class="card-body product-card-body text-center grocery-card-body">
+                            <a href="#" class="card-link text-center pt-2 cart-item-text">Lay's Onion Chips</a>
                             <p><span>$20</span> $10</p>
-                            <a class="btn product-card-button">Add To Cart</a>
+                            <a class="btn product-card-button grocery-card-button" data-items="Lay'sOnionChips">Add To Cart</a>
 
                         </div>
                     </div>
@@ -898,10 +918,10 @@
                             <img src="./res/product/f44.png" alt="" class="img-fluid product-box-img-two">
                         </div>
 
-                        <div class="card-body product-card-body text-center">
-                            <a href="#" class="card-link text-center pt-2">Cadbury Dairy Milk</a>
+                        <div class="card-body product-card-body text-center grocery-card-body">
+                            <a href="#" class="card-link text-center pt-2 cart-item-text">Cadbury Dairy Milk</a>
                             <p><span>$300</span> $200</p>
-                            <a class="btn product-card-button">Add To Cart</a>
+                            <a class="btn product-card-button grocery-card-button" data-items="CadburyDairyMilk">Add To Cart</a>
 
                         </div>
                     </div>
@@ -1036,7 +1056,8 @@
     <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/index.js"></script>
-    <script type="module" src="./js/itemsDetails.js"></script>
+    
+    <!-- <script type="module" src="./js/itemsDetails.js"></script> -->
 
 </body>
 
