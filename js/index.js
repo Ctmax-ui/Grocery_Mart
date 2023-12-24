@@ -12,39 +12,6 @@ itemsBtnBox.addEventListener("click", onclickItems => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// mainItemBox.innerHTML +=("<tr><td>Toma Cookies</td><td>x1</td><td>300$</td></tr>");
-
-
-
-
-
-
-
-
-
 //For the search modal...............
 const searchModal = document.querySelector(".search-modal-btn");
 const userSearch = document.querySelector(".search-modal-container");
@@ -56,13 +23,6 @@ searchModal.addEventListener("click", onclickSearch => {
         userSearch.style = "";
     });
 });
-
-
-
-
-
-
-
 
 
 
@@ -126,6 +86,8 @@ const observeSect = new IntersectionObserver((entities) => {
 
     mainNav.classList.toggle("fixed-top", !entities[0].isIntersecting);
     mainNav.classList.toggle("bg-white", !entities[0].isIntersecting);
+
+    console.log(mainNavText[0]);
 
     // console.log(mainNav);
     mainNavText.forEach(element => {

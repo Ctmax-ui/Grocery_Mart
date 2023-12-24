@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact-us.css">
+    <link rel="stylesheet" href="./css/Items-cart.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- all modal start -->
+    <div class="all-modal-container position-relative ">
+        <!-- 1 user login page modal  -->
+        <div class="user-modal">
+            <div class="user-modal-box ">
+                <div class="zx-tab-btn-group d-flex justify-content-around">
+                    <button class="zx-btn btn-hide btn-show" data-fortab="1">Login</button>
+                    <button class="zx-btn btn-hide" data-fortab="2">Register</button>
+                </div>
+
+                <div class="zx-tab-menu d-flex justify-content-center mb-2">
+                    <div class="zx-tabs zx-tabs-hidden zx-tabs-show" data-tab="1">
+                        <form action="#"
+                            class="form-control needs-validation user-modal-form p-5 d-grid justify-content-center">
+                            <input type="email" class="has-validation" required placeholder="Email">
+
+                            <input type="password" placeholder="Password" required>
+
+                            <a href="#" class="card-link pb-2 pt-2">Forgot Password</a>
+                            <button type="submit" class="btn btn-outline-dark d-block">Log In</button>
+                        </form>
+                    </div>
+                    <div class="zx-tabs zx-tabs-hidden " data-tab="2">
+                        <form action="#" class="form-control user-modal-form p-5 d-grid justify-content-center">
+                            <input type="email" class="" required placeholder="Create Username">
+                            <input type="email" class="" required placeholder="Email Address">
+                            <input type="password" class="" required placeholder="Password">
+                            <input type="password" class="" required placeholder="Confirm Password">
+                            <button type="submit" class="btn btn-outline-dark d-block">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 user search modal  -->
+        <div class="search-modal-container">
+            <div class="search-modal-box">
+                <div class="input-group w-auto">
+                    <input type="text" class="form-control search-input" placeholder="Search">
+                    <button class="btn btn-red px-4" type="button"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- all modal end -->
+
+
+
+    <!-- header section start -->
+    <header class="">
+
+        <section class="section-first-header bg-white">
+            <div class="container p-0 pt-4 ">
+
+                <div class="row justify-content-between m-0">
+
+                    <div class="col-2 header-user-icon mt-2 p-0">
+                        <a href="#" class="user-login-modal">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-6 site-brand-text p-0">
+                        <a href="#" class="text-center">
+                            <h1>Grocery Mart</h1>
+                            <p>Online Grocery Shopping</p>
+                        </a>
+                    </div>
+
+                    <div class="col-3 mt-2 p-0">
+                        <div class="row justify-content-start justify-content-sm-end m-0">
+
+                            <div class="col-3 header-search-icon p-0 pt-2">
+                                <a href="#" class="search-modal-btn">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+
+                            <div class="col-5 header-shop-icon p-0 position-relative">
+                                <a href="#" class="items-cart-btn">
+                                    <i class="fa fa-shopping-bag fw-bolder"></i>
+                                </a>
+
+
+                                <!------------------- 3 cart box -------------------------------->
+                                <div class="items-cart-container ">
+
+                                    <button class="btn items-cart-close-icn float-end me-3"><i
+                                            class="fa fa-x"></i></button>
+                                    <p class="text-center h4 fw-bold float-start pt-3 ps-4 text-dark">Your Cart</p>
+                                    <table class="table p-2">
+                                        <tr>
+                                            <th>All Products</th>
+                                            <th>Item Price</th>
+                                            <th>Total Quantity</th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="items-main-wraper">
+
+                                        <table class="table items-cart-box">
+
+
+                                            <tr class="cart-rows">
+                                                <td class="cart-item-title">Snaks</td>
+                                                <td class="cart-price">$20</td>
+                                                <td><Button class="cart-remove-btn">Remove</Button></td>
+                                                <td><input class="cart-quantity-input" type="number" value="1" min="0"
+                                                        max="99"></td>
+                                            </tr>
+
+
+                                            <!-- the JS code  -->
+
+                                        </table>
+
+                                    </div>
+                                    <table class="table text-center">
+                                        <tr>
+                                            <!-- <th scope="col">All</th> -->
+
+                                            <th scope="col">Total Price</th>
+                                        </tr>
+
+                                        <!-- <td>2</td> -->
+
+                                        <td class="final-items-price">$000</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!----------------------------------------------------------->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="container-fluid site-navigation-header py-4">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <button class="navbar-toggler bg-danger px-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navCollapse">
+                        <i class="fa fa-bars text-light"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse collapseable-navbar-menu " id="navCollapse">
+                        <ul class="navbar-nav text-center">
+
+                            <li class="nav-itemmx-auto active m-auto ">
+                                <a href="./index.html" class="nav-link nav-navigation-text  px-lg-3 px-2">HOME</a>
+                            </li>
+
+
+                            <li class="nav-item mx-auto">
+                                <div class="dropdown">
+
+                                    <a class="dropdown-toggle nav-link nav-navigation-text  px-lg-3 "
+                                        data-bs-toggle="dropdown" type="button">Products <span
+                                            class="fa-solid fa-angle-down"></span></a>
+
+                                    <div class="dropdown-menu nav-product-dropdown-menu overflow-hidden p-0 p-lg-3">
+
+                                        <div class="row nav-product-dropdown-row m-0 justify-content-center">
+                                            <div class=" col-lg-4 col-10  nav-product-dropdown-box">
+                                                <ul class="">
+                                                    <h6>Kitchen</h6>
+                                                    <li><a href="#">Meat & Seafood</a></li>
+                                                    <li><a href="#">Snack Foods <span>New</span></a></li>
+                                                    <li><a href="#">Oils, Vinegars</a></li>
+                                                    <li><a href="#">Pasta & Noodles <span>New</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class=" col-lg-4 col-10  nav-product-dropdown-box ">
+                                                <ul class="">
+                                                    <h6>Household</h6>
+                                                    <li><a href="#">Deter ents</a></li>
+                                                    <li><a href="#">Floor & Other Cleaners</a></li>
+                                                    <li><a href="#">Pet Care <span>New</span></a></li>
+                                                    <li><a href="#">Festive Decoratives</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class=" col-lg-4 col-10  nav-product-dropdown-box d-none d-lg-block">
+                                                <ul>
+                                                    <h5>30% <span>Off/-</span></h5>
+                                                    <li class="m-auto"><img src="./res/nav.png" alt=""></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li class="nav-item m-auto">
+                                <a href="#" class="nav-link nav-navigation-text px-lg-3">About Us</a>
+                            </li>
+
+
+                            <li class="nav-item m-auto">
+
+                                <div class="dropdown">
+
+                                    <a class="dropdown-toggle nav-link nav-navigation-text  px-lg-3"
+                                        data-bs-toggle="dropdown" type="button">Pages <span
+                                            class="fa-solid fa-angle-down"></span></a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a href="./index.html" class="dropdown-item">Blog Posts</a>
+                                        <a href="#" class="dropdown-item">Blog Single</a>
+                                        <a href="#" class="dropdown-item">Single </a>
+                                        <a href="#" class="dropdown-item">Faq's</a>
+                                        <a href="#" class="dropdown-item">Shortcodes</a>
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li class="nav-item m-auto ">
+                                <a href="./contact-us.html" class="nav-link nav-navigation-text  px-lg-3">Contact Us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </nav>
+
+
+
+
+            </div>
+        </div>
+    </header>
+    <!-- header section end -->
+
+
+
+    <!-- contact us page banner start -->
+    <section id="site-banner" class="bg-danger py-5">
+        <div class="container contact-us-banner-container">
+            <h3 class="text-white ">Contact Us</h3>
+        </div>
+
+    </section>
+    <!-- contact us page banner end -->
+    <section class="container-fluid simple-nav-section">
+        <div class="simple-nav-container d-grid justify-content-center align-items-center">
+            <ul class="m-0">
+                <li><a href="./index.html">Home</a></li>
+                <li>/</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Contact us form start -->
+    <section>
+        <div class="container contact-us-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Contact Info</h4>
+                    <p>We enjoy discussing new projects and design challenges. Please share as much info, as possible so
+                        we can get the most out of our first catch-up.</p>
+                    <div class="contact-us-left-box">
+                        <ul class="ps-0">
+                            <li><a href="#" style="pointer-events: none"><span class="fa-solid fa-location-dot"></span>
+                                    10001, 5th Avenue, 12202 street, USA.</a></li>
+
+                            <li><a href="tel:++44-000-888-999"><span class="fa-solid fa-phone"></span>
+                                    ++44-000-888-999</a>
+                            </li>
+
+                            <li><a href="mailto:info@example.com"><span class="fas fa-envelope-open-text"></span>
+                                    info@example.com</a></li>
+                        </ul>
+                        <div class="">
+                            <h5>Follow Us</h5>
+                            <ul>
+                                <li><a href="#"><span class="fa-brands fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa-brands fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                                <li><a href="#"><span class="fab fa-github"></span></a></li>
+                                <li><a href="#"><span class="fa-brands fa-instagram"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <form action="#" class="contact-us-form-box">
+                        <input type="text" class="form-control" placeholder="Your Name*" required>
+                        <input type="email" class="form-control" placeholder="Your Email*" required>
+                        <input type="text" class="form-control" placeholder="Subject*" required>
+                        <input type="url" class="form-control" placeholder="Website Url*" required>
+                        <div class="form-input">
+                            <textarea name="" id="contact-us-form-text-area" required
+                                placeholder="Type your message here*"></textarea>
+                        </div>
+                        <button type="submit" class="btn mt-3">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact us form end -->
+
+
+    <!-- Map section start -->
+
+    <section class="container-fluid p-0">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317716.6064799378!2d-0.4312466091253615!3d51.52860700915528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sin!4v1703407433134!5m2!1sen!2sin"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <!-- Map section end -->
+
+
+
+
+    <!-- newsletter section start  -->
+    <section id="newsletter-section">
+        <div class="container newsletter-container py-4 px-0 overflow-hidden">
+            <div class="row m-0 justify-content-md-between align-items-center justify-content-center">
+
+                <div class="col-md-5 newsletter-left-box ps-0 text-sm-center">
+                    <h4>Newsletter</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt.</p>
+                </div>
+
+                <div class="col-md-5 align-content-center">
+                    <div class="newsletter-container">
+
+                        <form action="#" class="">
+
+                            <div class="form-group d-flex newsletter-form-box justify-content-center ">
+                                <input type="email" class="form-control form-control-lg " id="input-email"
+                                    placeholder="Email" required>
+                                <button class="btn bgcorange-w-but font-weight-bold m-0" type="submit"><i
+                                        class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- newsletter section end  -->
+
+
+
+
+
+
+    <!-- footer section start -->
+    <footer id="footer-section" class="my-5">
+        <div class="container overflow-hidden">
+            <div class="row justify-content-lg-between justify-content-sm-around justify-content-center  row-gap-3">
+
+                <div class="col-lg-3 col-md-6 col-10 contact-box">
+                    <h4>Contact</h4>
+                    <ul class="pt-4">
+                        <li><a href="#" style="pointer-events: none"><span class="fa-solid fa-location-dot"></span>
+                                London, 235 Terry, 10001</a></li>
+                        <li><a href="mailto:info@example.com"><span class="fas fa-envelope-open-text"></span>
+                                info@example.com</a></li>
+                        <li><a href="tel:++44-000-888-999"><span class="fa-solid fa-phone"></span> ++44-000-888-999</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-10 info-box">
+                    <h4>Information</h4>
+                    <ul class="pt-3">
+                        <li><a href="#"><span class="fa fa-angle-right"></span> About Us</a> </li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Contact Us</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Shortcodes</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> FAQ's</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Special Products</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-10 category-box">
+                    <h4>Category</h4>
+                    <ul class="pt-3">
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Fruits & Vegetables</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Meats & Seafood</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Bakery & Pastry</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Beverages</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Breakfast & Dairy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-10 profile-box p-0">
+                    <h4>Profile</h4>
+                    <ul class="pt-3">
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Home</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Today's Deals</a></li>
+                    </ul>
+                    <div class="follow-us-box">
+                        <h5>Follow Us</h5>
+                        <ul>
+                            <li><a href="#"><span class="fa-brands fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa-brands fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa-brands fa-google-plus-g"></span></a></li>
+                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+
+
+    <script src="./js/jquery.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

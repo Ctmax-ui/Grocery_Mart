@@ -35,7 +35,7 @@ function eachCartBtn(event){
     let eachBtn = event.target.parentElement;
     let eachItemName = eachBtn.getElementsByClassName('cart-item-text')[0].innerHTML;
     let eachItemPrice = +eachBtn.querySelector('p').lastChild.data.replace('$','');
-    console.log(eachItemName, eachItemPrice);
+    // console.log(eachItemName, eachItemPrice);
 
     addToCartRow(eachItemName, eachItemPrice);
     updateAllPrice()
