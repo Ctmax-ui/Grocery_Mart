@@ -25,19 +25,19 @@
 }
 .user-modal{
     position: fixed;
-    height: 120%;
+    height: 500%;
     width: 100%;
     background-color: #0000004f;
     z-index: 9999999999 !important;
     visibility: hidden;
     pointer-events: none;
-    transform: translatey(-50px);
-    transition: all .3s ease;
+    transform: translatey(-900px);
+    transition: all .3s linear;
 }
 .user-modal-show{
     visibility: unset;
     pointer-events: all;
-    transform: translatey(0);
+    transform: translatey(-100px);
 }
 .user-modal-box{
     position: fixed;
