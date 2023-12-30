@@ -75,33 +75,17 @@ tabGroup.forEach((eachTabs) => {
 
 //For The Header Section.............
 
-const headerSection = document.querySelector(".section-first-header");
-// console.log(headerSection);
-
-const mainNav = document.querySelector(".site-navigation-header");
-const mainNavText = document.querySelectorAll(".nav-navigation-text");
-
-const observeSect = new IntersectionObserver((entities) => {
-    // console.log(entities[0].isIntersecting);
-
-    mainNav.classList.toggle("fixed-top", !entities[0].isIntersecting);
-    mainNav.classList.toggle("bg-white", !entities[0].isIntersecting);
-
-    console.log(mainNavText[0]);
-
-    // console.log(mainNav);
-    mainNavText.forEach(element => {
-        element.classList.toggle("text-white", entities[0].isIntersecting);
-        element.classList.toggle("red-nav", !entities[0].isIntersecting);
-        mainNav.classList.toggle("pt-3", !entities[0].isIntersecting);
-        mainNav.classList.toggle("pb-3", !entities[0].isIntersecting);
-        element.classList.toggle("text-black", !entities[0].isIntersecting);
+window.addEventListener('scroll', function () {
+    let header = document.querySelector('.site-navigation-header');
+    header.classList.toggle('sticky', window.scrollY > 125);
+    let headerTexts = document.querySelectorAll('.nav-navigation-text');
+    headerTexts.forEach(function(e){
+        e.classList.toggle('sticky', window.scrollY > 125);
     });
+});
 
-}, {/*rootMargin: "1px"*/ });
 
 
-observeSect.observe(headerSection);
 
 
 
