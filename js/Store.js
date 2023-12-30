@@ -51,19 +51,21 @@ function addToCartRow(eachItemName, eachItemPrice) {
 
     };
 
-    let tr = document.createElement('tr');
-    tr.classList.add('cart-rows');
+    // change cart system
 
-    tr.innerHTML += `
+    let cartRowContent = document.createElement('tr');
+    cartRowContent.classList.add('cart-rows');
+
+    cartRowContent.innerHTML += `
                 <td class="cart-item-title">${eachItemName}</td>
-                <td class="cart-price">$${eachItemPrice}</td>
-                <td><Button class="cart-remove-btn">Remove</Button></td>
+                <td class="cart-price text-center">$${eachItemPrice}</td>
+                <td><Button class="cart-remove-btn">X</Button></td>
                 <td><input class="cart-quantity-input" type="number" min="0" max="99" value="1"></td>`;
 
     // cartBody.innerHTML += cartRowContent;
-    cartBody.append(tr)
+    cartBody.append(cartRowContent);
 
-    ready()
+    ready();
 };
 
 function quantityChanged(e) {
