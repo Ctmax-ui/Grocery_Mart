@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- the store js will load with the body using "async" -->
+    <script type="module" src="./js/Store.js" async></script>
 </head>
 
 <body>
@@ -68,7 +71,6 @@
     <!-- all modal end -->
 
 
-
     <!-- header section start -->
     <header>
 
@@ -106,30 +108,31 @@
 
 
                                 <!------------------- 3 cart box -------------------------------->
-                                <div class="items-cart-container ">
+                                <div class="items-cart-container overflow-hidden text-center">
 
                                     <button class="btn items-cart-close-icn float-end me-3"><i
                                             class="fa fa-x"></i></button>
                                     <p class="text-center h4 fw-bold float-start pt-3 ps-4 text-dark">Your Cart</p>
-                                    <table class="table p-2">
-                                        <tr>
+                                    <table class="table ps-md-3 ms-0 table-bordered text-center">
+                                        <tr class="ps-3">
                                             <th>All Products</th>
                                             <th>Item Price</th>
                                             <th>Total Quantity</th>
                                         </tr>
                                     </table>
 
-                                    <div class="items-main-wraper">
+                                    <div class="items-main-wraper p-0">
 
-                                        <table class="table items-cart-box">
+                                        <table class="table items-cart-box table-bordered table-striped text-center">
 
 
-                                            <tr class="cart-rows">
+                                            <tr class="cart-rows d-none">
                                                 <td class="cart-item-title">Snaks</td>
-                                                <td class="cart-price">$20</td>
-                                                <td><Button class="cart-remove-btn">Remove</Button></td>
-                                                <td><input class="cart-quantity-input" type="number" value="1" min="0"
-                                                        max="99"></td>
+                                                <td class="cart-price text-center">$20</td>
+                                                <td class="text-center" style="width: 20px;"><Button
+                                                        class="cart-remove-btn">X</Button></td>
+                                                <td class="text-center"><input class="cart-quantity-input" type="number"
+                                                        value="0" min="0" max="99"></td>
                                             </tr>
 
 
@@ -138,7 +141,7 @@
                                         </table>
 
                                     </div>
-                                    <table class="table text-center">
+                                    <table class="table text-center table-bordered">
                                         <tr>
                                             <!-- <th scope="col">All</th> -->
 
@@ -147,9 +150,12 @@
 
                                         <!-- <td>2</td> -->
 
-                                        <td class="final-items-price">$000</td>
+                                        <td class="final-items-price">$0</td>
+                                        <td><a href="#"><button class="btn btn-sm btn-outline-success m-auto">Order
+                                                    Now</button></a></td>
                                         </tr>
                                     </table>
+
                                 </div>
                                 <!----------------------------------------------------------->
                             </div>
@@ -180,8 +186,8 @@
                             <li class="nav-item mx-auto">
                                 <div class="dropdown">
 
-                                    <a class="dropdown-toggle nav-navigation-text  px-lg-3 "
-                                        data-bs-toggle="dropdown" type="button">Products <span
+                                    <a class="dropdown-toggle nav-navigation-text  px-lg-3 " data-bs-toggle="dropdown"
+                                        type="button" id="current-active">Products <span
                                             class="fa-solid fa-angle-down"></span></a>
 
                                     <div class="dropdown-menu nav-product-dropdown-menu overflow-hidden p-0 p-lg-3">
@@ -227,9 +233,8 @@
 
                                 <div class="dropdown">
 
-                                    <a class="dropdown-toggle nav-navigation-text  px-lg-3"
-                                        data-bs-toggle="dropdown" type="button">Pages <span
-                                            class="fa-solid fa-angle-down"></span></a>
+                                    <a class="dropdown-toggle nav-navigation-text  px-lg-3" data-bs-toggle="dropdown"
+                                        type="button">Pages <span class="fa-solid fa-angle-down"></span></a>
 
                                     <div class="dropdown-menu">
 
@@ -245,7 +250,7 @@
 
 
                             <li class="nav-item m-auto ">
-                                <a href="./contact-us.html" class="nav-navigation-text  px-lg-3" id="current-active">Contact Us</a>
+                                <a href="./contact-us.html" class="nav-navigation-text  px-lg-3">Contact Us</a>
                             </li>
 
                         </ul>
@@ -261,6 +266,367 @@
     </header>
     <!-- header section end -->
 
+
+    <!-- page banner start -->
+    <section id="site-banner" class="bg-danger py-5">
+        <div class="container extra-page-banner-container">
+            <h3 class="text-white ">Top Selling </h3>
+            <h4>Kitchen Products</h4>
+            <p>Flat <span>25%</span> Discount</p>
+        </div>
+
+    </section>
+    <!-- page banner end -->
+
+    <!-- page after banner start -->
+    <section class="container-fluid simple-nav-section">
+        <div class="simple-nav-container d-grid justify-content-center align-items-center">
+            <ul class="m-0">
+                <li><a href="./index.html">Home</a></li>
+                <li>/</li>
+                <li>Products</li>
+            </ul>
+        </div>
+    </section>
+    <!-- page after banner end -->
+
+
+    <section class="my-5">
+        <div class="container my-5">
+            <div class="row justify-content-between">
+
+                <div class="col-md-3 ">
+                    <div class="row m-0 left-navigation-section">
+
+                        <p>Categories</p>
+                        <div class="col-12 border mb-4 categorie-box">
+                            <ul>
+                                <li><a href="#">Ready Meal & Mixes</a></li>
+                                <li><a href="#">Food Combo</a></li>
+                                <li><a href="#">Kitchen Tools</a></li>
+                                <li><a href="#">Cookware</a></li>
+                                <li><a href="#">Outdoor Cooking</a></li>
+                                <li><a href="#">Hand Juicers</a></li>
+                                <li><a href="#">Dry Fruit, Nut & Seed</a></li>
+                            </ul>
+                        </div>
+
+                        <p>Brand</p>
+                        <div class="col-12  border mb-4">
+
+                        </div>
+
+                        <p>Price</p>
+                        <div class="col-12  border ">
+                            3
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row m-0 product-image-section justify-content-between">
+                        <div class="col-md-6 px-1 position-relative overflow-hidden">
+
+                            <div class="product-image-text-box position-absolute">
+                                <p>Best<br><span>Price</span><br>on Vegetables</p>
+                            </div>
+                            <img src="./res/extra-section-res/pbg1.jpg" alt="image">
+
+                        </div>
+                        <div class="col-md-6 px-1 position-relative overflow-hidden">
+
+                            <div class="product-image-text-box position-absolute">
+                                <p>Best Deals<br><span>For New</span><br>Products</p>
+                            </div>
+                            <img src="./res/extra-section-res/pbg2.jpg" alt="image">
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row m-0 justify-content-between my-3 align-items-center">
+                        <div class="col-4">
+                            <p class="m-0">Showing Prices: Default</p>
+                        </div>
+                        <div class="col-3">
+                            <select class="form-select form-select-sm" aria-label="Default select example">
+                                <option selected>Default</option>
+                                <option value="1">Sort by popularity</option>
+                                <option value="2">Sort by average rating</option>
+                                <option value="3">Sort by newness</option>
+                                <option value="3">Sort by price: low to high</option>
+                                <option value="3">Sort by price: high to low</option>
+                              </select>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row m-0 justify-content-center">
+
+                        <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+
+                            <div class="card h-100 product-tab-card">
+                                <div class="product-images-box position-relative   overflow-hidden">
+                                    <div class="product-slider-shadow-box position-absolute"></div>
+                                    <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                        <i class="fa fa-eye"></i>
+                                    </div>
+                                    <img src="./res/product/pp1.png" alt="Red Chilli Powder"
+                                        class="img-fluid product-box-img-one">
+                                    <img src="./res/product/pp2.png" alt="Red Chilli Powder"
+                                        class="img-fluid product-box-img-two">
+                                </div>
+
+                                <div class="card-body product-card-body text-center grocery-card-body">
+                                    <a href="#" class="card-link text-center pt-2 cart-item-text">Red Chilli Powder</a>
+                                    <p><span>$280</span> $180</p>
+                                    <a class="btn product-card-button grocery-card-button grocery-card-button"
+                                        data-items="RedChilliPowder">Add To Cart</a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                            <a href="#">
+                                <div class="card h-100 product-tab-card">
+                                    <div class="product-images-box position-relative   overflow-hidden">
+                                        <div class="product-slider-shadow-box position-absolute"></div>
+                                        <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                            <i class="fa fa-eye"></i>
+                                        </div>
+                                        <img src="./res/product/pp3.png" alt="Fortune Rice"
+                                            class="img-fluid product-box-img-one">
+                                        <img src="./res/product/pp4.png" alt="Fortune Rice"
+                                            class="img-fluid product-box-img-two">
+                                    </div>
+
+                                    <div class="card-body product-card-body text-center grocery-card-body">
+                                        <a href="#" class="card-link text-center pt-2 cart-item-text">Fortune Rice</a>
+                                        <p><span>$30</span> $25</p>
+                                        <a class="btn product-card-button grocery-card-button"
+                                            data-items="FortuneRice">Add To
+                                            Cart</a>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+
+
+                        <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                            <a href="#">
+                                <div class="card h-100 product-tab-card">
+                                    <div class="product-images-box position-relative   overflow-hidden">
+                                        <div class="product-slider-shadow-box position-absolute"></div>
+                                        <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                            <i class="fa fa-eye"></i>
+                                        </div>
+                                        <img src="./res/product/pp5.png" alt="Freedom Oil"
+                                            class="img-fluid product-box-img-one">
+                                        <img src="./res/product/pp6.png" alt="Freedom Oil"
+                                            class="img-fluid product-box-img-two">
+                                    </div>
+
+                                    <div class="card-body product-card-body text-center grocery-card-body">
+                                        <a href="#" class="card-link text-center pt-2 cart-item-text">Freedom Oil</a>
+                                        <p><span>$950</span> $810</p>
+                                        <a class="btn product-card-button grocery-card-button"
+                                            data-items="FreedomOil">Add To
+                                            Cart</a>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+
+
+                        <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                            <a href="#">
+                                <div class="card h-100 product-tab-card">
+                                    <div class="product-images-box position-relative   overflow-hidden">
+                                        <div class="product-slider-shadow-box position-absolute"></div>
+                                        <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                            <i class="fa fa-eye"></i>
+                                        </div>
+                                        <img src="./res/product/pp7.png" alt="Lipton Green Tea"
+                                            class="img-fluid product-box-img-one">
+                                        <img src="./res/product/pp8.png" alt="Lipton Green Tea"
+                                            class="img-fluid product-box-img-two">
+                                    </div>
+
+                                    <div class="card-body product-card-body text-center grocery-card-body">
+                                        <a href="#" class="card-link text-center pt-2 cart-item-text">Lipton Green
+                                            Tea</a>
+                                        <p><span>$32</span> $29</p>
+                                        <a class="btn product-card-button grocery-card-button"
+                                            data-items="LiptonGreenTea">Add To
+                                            Cart</a>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+
+
+                        <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                            <a href="#">
+                                <div class="card h-100 product-tab-card">
+                                    <div class="product-images-box position-relative   overflow-hidden">
+                                        <div class="product-slider-shadow-box position-absolute"></div>
+                                        <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                            <i class="fa fa-eye"></i>
+                                        </div>
+                                        <img src="./res/product/pp9.png" alt="Amul Wheat Atta"
+                                            class="img-fluid product-box-img-one">
+                                        <img src="./res/product/pp10.png" alt="Amul Wheat Atta"
+                                            class="img-fluid product-box-img-two">
+                                    </div>
+
+                                    <div class="card-body product-card-body text-center grocery-card-body">
+                                        <a href="#" class="card-link text-center pt-2 cart-item-text">Amul Wheat
+                                            Atta</a>
+                                        <p><span>$450</span> $425</p>
+                                        <a class="btn product-card-button grocery-card-button"
+                                            data-items="AmulWheatAtta">Add To
+                                            Cart</a>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+
+
+                        <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                            <a href="#">
+                                <div class="card h-100 product-tab-card">
+                                    <div class="product-images-box position-relative   overflow-hidden">
+                                        <div class="product-slider-shadow-box position-absolute"></div>
+                                        <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                            <i class="fa fa-eye"></i>
+                                        </div>
+                                        <img src="./res/product/pp11.png" alt="MOTHER'S Mango Pickle"
+                                            class="img-fluid product-box-img-one">
+                                        <img src="./res/product/pp12.png" alt="MOTHER'S Mango Pickle"
+                                            class="img-fluid product-box-img-two">
+                                    </div>
+
+                                    <div class="card-body product-card-body text-center grocery-card-body">
+                                        <a href="#" class="card-link text-center pt-2 cart-item-text">MOTHER'S Mango
+                                            Pickle</a>
+                                        <p><span>$30</span> $22</p>
+                                        <a class="btn product-card-button grocery-card-button"
+                                            data-items="MOTHERSMangoPickle">Add To
+                                            Cart</a>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+
+
+                        <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                            <a href="#">
+                                <div class="card h-100 product-tab-card">
+                                    <div class="product-images-box position-relative   overflow-hidden">
+                                        <div class="product-slider-shadow-box position-absolute"></div>
+                                        <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                            <i class="fa fa-eye"></i>
+                                        </div>
+                                        <img src="./res/product/pp5.png" alt="Freedom Oil"
+                                            class="img-fluid product-box-img-one">
+                                        <img src="./res/product/pp6.png" alt="Freedom Oil"
+                                            class="img-fluid product-box-img-two">
+                                    </div>
+
+                                    <div class="card-body product-card-body text-center grocery-card-body">
+                                        <a href="#" class="card-link text-center pt-2 cart-item-text">Freedom Oil</a>
+                                        <p><span>$950</span> $810</p>
+                                        <a class="btn product-card-button grocery-card-button"
+                                            data-items="FreedomOil">Add To
+                                            Cart</a>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+
+                        <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                            <a href="#">
+                                <div class="card h-100 product-tab-card">
+                                    <div class="product-images-box position-relative   overflow-hidden">
+                                        <div class="product-slider-shadow-box position-absolute"></div>
+                                        <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                            <i class="fa fa-eye"></i>
+                                        </div>
+                                        <img src="./res/product/pp1.png" alt="Red Chilli Powder"
+                                            class="img-fluid product-box-img-one">
+                                        <img src="./res/product/pp2.png" alt="Red Chilli Powder"
+                                            class="img-fluid product-box-img-two">
+                                    </div>
+
+                                    <div class="card-body product-card-body text-center grocery-card-body">
+                                        <a href="#" class="card-link text-center pt-2 cart-item-text">Red Chilli
+                                            Powder</a>
+                                        <p><span>$280</span> $180</p>
+                                        <a class="btn product-card-button grocery-card-button grocery-card-button"
+                                            data-items="RedChilliPowder">Add To Cart</a>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+
+
+                        <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                            <a href="#">
+                                <div class="card h-100 product-tab-card">
+                                    <div class="product-images-box position-relative   overflow-hidden">
+                                        <div class="product-slider-shadow-box position-absolute"></div>
+                                        <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                            <i class="fa fa-eye"></i>
+                                        </div>
+                                        <img src="./res/product/pp3.png" alt="Fortune Rice"
+                                            class="img-fluid product-box-img-one">
+                                        <img src="./res/product/pp4.png" alt="Fortune Rice"
+                                            class="img-fluid product-box-img-two">
+                                    </div>
+
+                                    <div class="card-body product-card-body text-center grocery-card-body">
+                                        <a href="#" class="card-link text-center pt-2 cart-item-text">Fortune Rice</a>
+                                        <p><span>$30</span> $25</p>
+                                        <a class="btn product-card-button grocery-card-button"
+                                            data-items="FortuneRice">Add To
+                                            Cart</a>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -296,11 +662,6 @@
         </div>
     </section>
     <!-- newsletter section end  -->
-
-
-
-
-
 
     <!-- footer section start -->
     <footer id="footer-section" class="my-5">

@@ -106,29 +106,29 @@
 
 
                                 <!------------------- 3 cart box -------------------------------->
-                                <div class="items-cart-container ">
+                                <div class="items-cart-container overflow-hidden text-center">
 
                                     <button class="btn items-cart-close-icn float-end me-3"><i
                                             class="fa fa-x"></i></button>
                                     <p class="text-center h4 fw-bold float-start pt-3 ps-4 text-dark">Your Cart</p>
-                                    <table class="table p-2">
-                                        <tr>
+                                    <table class="table ps-md-3 ms-0 table-bordered text-center">
+                                        <tr class="ps-3">
                                             <th>All Products</th>
                                             <th>Item Price</th>
                                             <th>Total Quantity</th>
                                         </tr>
                                     </table>
 
-                                    <div class="items-main-wraper">
+                                    <div class="items-main-wraper p-0">
 
-                                        <table class="table items-cart-box">
+                                        <table class="table items-cart-box table-bordered table-striped text-center">
 
 
-                                            <tr class="cart-rows">
+                                            <tr class="cart-rows d-none">
                                                 <td class="cart-item-title">Snaks</td>
-                                                <td class="cart-price">$20</td>
-                                                <td><Button class="cart-remove-btn">Remove</Button></td>
-                                                <td><input class="cart-quantity-input" type="number" value="1" min="0"
+                                                <td class="cart-price text-center">$20</td>
+                                                <td class="text-center" style="width: 20px;"><Button class="cart-remove-btn">X</Button></td>
+                                                <td class="text-center"><input class="cart-quantity-input" type="number" value="0" min="0"
                                                         max="99"></td>
                                             </tr>
 
@@ -138,7 +138,7 @@
                                         </table>
 
                                     </div>
-                                    <table class="table text-center">
+                                    <table class="table text-center table-bordered">
                                         <tr>
                                             <!-- <th scope="col">All</th> -->
 
@@ -147,9 +147,11 @@
 
                                         <!-- <td>2</td> -->
 
-                                        <td class="final-items-price">$000</td>
+                                        <td class="final-items-price">$0</td>
+                                        <td><a href="#"><button class="btn btn-sm btn-outline-success m-auto">Order Now</button></a></td>
                                         </tr>
                                     </table>
+                                    
                                 </div>
                                 <!----------------------------------------------------------->
                             </div>

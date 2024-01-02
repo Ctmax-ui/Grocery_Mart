@@ -58,7 +58,7 @@ function addToCartRow(eachItemName, eachItemPrice) {
 
     cartRowContent.innerHTML += `
                 <td class="cart-item-title">${eachItemName}</td>
-                <td class="cart-price text-center">$${eachItemPrice}</td>
+                <td class="cart-price text-center">$${eachItemPrice} x</td>
                 <td><Button class="cart-remove-btn">X</Button></td>
                 <td><input class="cart-quantity-input" type="number" min="0" max="99" value="1"></td>`;
 
@@ -66,6 +66,7 @@ function addToCartRow(eachItemName, eachItemPrice) {
     cartBody.append(cartRowContent);
 
     ready();
+  
 };
 
 function quantityChanged(e) {
@@ -94,6 +95,8 @@ let timeId = setInterval(t => {
     updateAllPrice()
 }, 100);
 
+updateAllPrice.addEventListener('change', updateAllPrice())
+
 
 function updateAllPrice() {
     let cartItemContainer = document.getElementsByClassName('items-cart-box')[0];
@@ -110,7 +113,7 @@ function updateAllPrice() {
         totalItemPrice = totalItemPrice + (price * quantity);
         // console.log(price, quantity, totalItemPrice);
 
-
+        
 
         // console.log(finalPrice);
     }

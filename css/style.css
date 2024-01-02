@@ -953,6 +953,7 @@ header{
 
 .product-images-box{
     background-color: #f4f4f4;
+    border-radius: 7px;
     
 }
 .product-box-img-one{
@@ -994,13 +995,15 @@ header{
     width: 100%;
     height: 100%;
     background-color: #0606063b !important;
-    border-radius: 7px;
+    border-radius: 7px !important;
     cursor: default;
     transform-origin: right bottom;
     transform: rotate(90deg);
     transition: all 0.3s;
     position: relative;
     z-index: 999;
+
+    
 }
 
 .top-product-boxes:hover .product-slider-shadow-box {
