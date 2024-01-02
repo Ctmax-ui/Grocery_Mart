@@ -429,21 +429,21 @@ padding: 10px 0;
 }
 
 
-.categorie-box{
+.category-box{
     padding: 20px 20px !important;
 }
-.categorie-box ul{
+.category-box ul{
     padding: 0;/
 }
-.categorie-box ul li{
+.category-box ul li{
     list-style: none;
     padding: 5px 0;
 }
-.categorie-box ul li a{
+.category-box ul li a{
     color: #383838;
     transition: all .4 ease;
 }
-.categorie-box ul li a:hover{
+.category-box ul li a:hover{
     color: #ed174a !important;
 }
 
@@ -455,7 +455,7 @@ padding: 10px 0;
 
 .product-image-text-box{
     top: 10%;
-    right: 40%;
+    left: 20%;
 }
 .product-image-text-box p{
     font-size: 1.5rem;
