@@ -29,7 +29,6 @@ searchModal.addEventListener("click", onclickSearch => {
 
 
 
-
 //For The User Login And Password Modal..............
 const userLoginModal = document.querySelector(".user-login-modal");
 const userModal = document.querySelector(".user-modal");
@@ -63,7 +62,6 @@ tabGroup.forEach((eachTabs) => {
 
             if (+eachBtn.dataset.fortab === +eachTabs.dataset.tab) {
                 btnGroup.forEach(btn => { btn.classList.remove("btn-show") });
-
                 eachTabs.classList.add("zx-tabs-show");
                 eachBtn.classList.add("btn-show");
             };
