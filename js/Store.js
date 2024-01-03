@@ -95,7 +95,7 @@ let timeId = setInterval(t => {
     updateAllPrice()
 }, 100);
 
-updateAllPrice.addEventListener('change', updateAllPrice())
+// updateAllPrice.addEventListener('change', updateAllPrice())
 
 
 function updateAllPrice() {

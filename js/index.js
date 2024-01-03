@@ -19,28 +19,35 @@ searchModal.addEventListener("click", onclickSearch => {
     // console.log(onclickSearch);
     // console.log(userSearch);
     userSearch.style = "display: block; !importent";
-    userSearch.addEventListener("click", (f) => {
+
+    document.addEventListener("click", (f) => {
+        if (f.target === userSearch && f.target !== userSearch.children[0]) {
         userSearch.style = "";
+        }
     });
 });
-
 
 
 
 //For The User Login And Password Modal..............
 const userLoginModal = document.querySelector(".user-login-modal");
+const userModal = document.querySelector(".user-modal");
 
-userLoginModal.addEventListener("click", userOnclick => {
-    const userModal = document.querySelector(".user-modal");
-    // console.log(userModal);
-    userModal.classList.add("user-modal-show");
-    userModal.addEventListener("click", (f) => {
+userLoginModal.addEventListener("click", (userOnclick) => {
+    userOnclick.stopPropagation();
+    userModal.classList.toggle("user-modal-show");
+});
+
+document.addEventListener("click", (clickEvent) => {
+
+    if (clickEvent.target === userModal && clickEvent.target !== userModal.children[0]) {
         userModal.classList.remove("user-modal-show");
-    });
+    }
 });
 
 
-//For the login and create Account tap/pill
+
+//For the login and create Account tab/pill
 const btnGroup = document.querySelectorAll(".zx-btn");
 const tabGroup = document.querySelectorAll(".zx-tabs");
 
@@ -55,7 +62,6 @@ tabGroup.forEach((eachTabs) => {
 
             if (+eachBtn.dataset.fortab === +eachTabs.dataset.tab) {
                 btnGroup.forEach(btn => { btn.classList.remove("btn-show") });
-
                 eachTabs.classList.add("zx-tabs-show");
                 eachBtn.classList.add("btn-show");
             };
@@ -63,8 +69,15 @@ tabGroup.forEach((eachTabs) => {
     });
 });
 
+// for the items preview box
 
+let allItemsPreviewbox = document.querySelectorAll('.product-slider-preview-box');
+// console.log(allItemsPreviewbox);
 
+for(let i = 0; i <allItemsPreviewbox.length; i++){
+   let allItemsPreviewboxParent = allItemsPreviewbox[i].parentElement;
+   console.log(allItemsPreviewboxParent);
+}
 
 
 
