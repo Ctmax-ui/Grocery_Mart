@@ -1,1 +1,1 @@
-# This is a ecommarse website
+# This is a ecommarse website for shopping
