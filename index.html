@@ -68,10 +68,29 @@
         </div>
 
         <!-- 3 items preview box -->
-        <div class="items-preview-modal-container d-none">
+        <div class="items-preview-modal-container ">
             <div class="items-preview-modal-box">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-end"><button class="btn btn-outline-success"><i class="fa fa-x"></i></button></div>
+            <div class="row m-0 justify-content-center">
+                <div class="col-12 d-flex justify-content-end pt-3"><button class="btn btn-outline-success" id="preview-modal-btn"><i class="fa fa-x"></i></button></div>
+
+                <div class="col-sm-4 col-8 product-preview-image-box">
+                    <img class="img-fluid" src="./res/product/e4.png" alt="">
+                </div>
+                <div class="col-sm-6 col-10">
+                    <div class="product-preview-name mb-3"></div>
+                    <div class="product-preview-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</div>
+                    <div class="product-preview-rating">
+                        <ul class="p-0 pt-2">
+                            <li><a href="#"><i class="fa-regular fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa-regular fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa-regular fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa-regular fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa-regular fa-star"></i></a></li>
+                        </ul>
+                        <div class="product-preview-price"><p>$200</p></div>
+                        <div class="product-preview-add-cart-btn"></div>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
@@ -302,6 +321,7 @@
 
     <!-- banner end  -->
 
+
     <!-- grocory cart start  -->
 
     <section id="grocery-section" class="py-5">
@@ -354,75 +374,82 @@
 
                             <div class="row m-0 justify-content-between">
 
-                                <div class=" col-sm-4 col-10 m-auto p-1 grocery-tabs-box overflow-hidden">
-                                    <a href="#" class="grocery-tabs-box-anchor">
-
-                                        <div class="card h-100 grocery-tab-card">
-                                            <div class="card-images-box position-relative   overflow-hidden">
-                                                <div class="slider-shadow-box position-absolute z-3"></div>
-                                                <div class="slider-preview-box position-absolute z-3 text-center pt-2">
-                                                    <i class="fa fa-eye"></i>
-                                                </div>
-                                                <img src="./res/a1.png" alt="">
+                                <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                                    <div class="card h-100 product-tab-card">
+                                        <div class="product-images-box position-relative   overflow-hidden">
+                                            <div class="product-slider-shadow-box position-absolute"></div>
+                                            <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                                <i class="fa fa-eye"></i>
                                             </div>
-
-                                            <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center cart-item-text">Ladies Finger
-                                                    500g</a>
-                                                <p><span>$380</span> $350</p>
-                                                <a class="btn grocery-card-button" data-items="ladiesFinger">Add To
-                                                    Cart</a>
-                                            </div>
-
+                                            <img src="./res/a1.png" alt="Red Chilli Powder"
+                                                class="img-fluid product-box-img-one">
+                                            <img src="./res/a1.png" alt="Red Chilli Powder"
+                                                class="img-fluid product-box-img-two">
                                         </div>
-                                    </a>
+        
+                                        <div class="card-body product-card-body text-center grocery-card-body">
+                                            <a href="#" class="card-link text-center pt-2 cart-item-text">Ladies Finger 500g</a>
+                                            <p><span>$380</span> $350</p>
+                                            <a class="btn product-card-button grocery-card-button grocery-card-button"
+                                                data-items="LadiesFinger">Add To Cart</a>
+        
+                                        </div>
+                                    </div>
+        
+        
                                 </div>
 
-                                <div class=" col-sm-4 col-10 m-auto p-1 grocery-tabs-box overflow-hidden">
-                                    <a href="#" class="grocery-tabs-box-anchor">
-
-                                        <div class="card h-100 grocery-tab-card">
-                                            <div class="card-images-box position-relative   overflow-hidden ">
-                                                <div class="slider-shadow-box position-absolute z-3"></div>
-                                                <div class="slider-preview-box position-absolute z-3 text-center pt-2">
-                                                    <i class="fa fa-eye"></i>
-                                                </div>
-                                                <img src="./res/a2.png" alt="">
+                                <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                                    <div class="card h-100 product-tab-card">
+                                        <div class="product-images-box position-relative   overflow-hidden">
+                                            <div class="product-slider-shadow-box position-absolute"></div>
+                                            <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                                <i class="fa fa-eye"></i>
                                             </div>
-
-                                            <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center cart-item-text">Brinjal long
-                                                    500g</a>
-                                                <p><span>$330</span> $300</p>
-                                                <a class="btn grocery-card-button" data-items="brinjalLong">Add To
-                                                    Cart</a>
-                                            </div>
-
+                                            <img src="./res/a2.png" alt="Red Chilli Powder"
+                                                class="img-fluid product-box-img-one">
+                                            <img src="./res/a2.png" alt="Red Chilli Powder"
+                                                class="img-fluid product-box-img-two">
                                         </div>
-                                    </a>
+        
+                                        <div class="card-body product-card-body text-center grocery-card-body">
+                                            <a href="#" class="card-link text-center pt-2 cart-item-text">Brinjal long 500g</a>
+                                            <p><span>$330</span> $302</p>
+                                            <a class="btn product-card-button grocery-card-button grocery-card-button"
+                                                data-items="BrinjalLong">Add To Cart</a>
+        
+                                        </div>
+                                    </div>
+        
+        
                                 </div>
 
-                                <div class=" col-sm-4 col-10 m-auto p-1 grocery-tabs-box overflow-hidden">
-                                    <a href="#" class="grocery-tabs-box-anchor">
-
-                                        <div class="card h-100 grocery-tab-card">
-                                            <div class="card-images-box position-relative   overflow-hidden ">
-                                                <div class="slider-shadow-box position-absolute z-3"></div>
-                                                <div class="slider-preview-box position-absolute z-3 text-center pt-2">
-                                                    <i class="fa fa-eye"></i>
-                                                </div>
-                                                <img src="./res/a3.png" alt="">
+                                <div class="p-2 ps-md-3 col-md-4 col-sm-4 col-6  top-product-boxes">
+                                    <div class="card h-100 product-tab-card">
+                                        <div class="product-images-box position-relative   overflow-hidden">
+                                            <div class="product-slider-shadow-box position-absolute"></div>
+                                            <div class="product-slider-preview-box position-absolute text-center pt-2">
+                                                <i class="fa fa-eye"></i>
                                             </div>
-
-                                            <div class="card-body grocery-card-body text-center">
-                                                <a href="#" class="card-link text-center cart-item-text">Palak 250g</a>
-                                                <p><span>$250</span> $245</p>
-                                                <a class="btn grocery-card-button" data-items="palak">Add To Cart</a>
-                                            </div>
-
+                                            <img src="./res/a3.png" alt="Red Chilli Powder"
+                                                class="img-fluid product-box-img-one">
+                                            <img src="./res/a3.png" alt="Red Chilli Powder"
+                                                class="img-fluid product-box-img-two">
                                         </div>
-                                    </a>
+        
+                                        <div class="card-body product-card-body text-center grocery-card-body">
+                                            <a href="#" class="card-link text-center pt-2 cart-item-text">Palak 250g</a>
+                                            <p><span>$250</span> $245</p>
+                                            <a class="btn product-card-button grocery-card-button grocery-card-button"
+                                                data-items="Palak">Add To Cart</a>
+        
+                                        </div>
+                                    </div>
+        
+        
                                 </div>
+
+                                
 
                             </div>
                         </div>
@@ -682,6 +709,7 @@
     <!-- grocory cart end  -->
 
 
+
     <!-- second banner start  -->
 
     <section class="container-fluid bg-danger-subtle mb-5 p-0">
@@ -709,7 +737,6 @@
 
         </div>
     </section>
-
 
     <!-- second banner end  -->
 
@@ -775,7 +802,7 @@
         <div class="row m-0 justify-content-center ">
 
             <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
-                <a href="#">
+                <!-- <a href="#"> -->
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
                             <div class="product-slider-shadow-box position-absolute"></div>
@@ -795,12 +822,12 @@
                         </div>
                     </div>
 
-                </a>
+                <!-- </a> -->
             </div>
 
 
             <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
-                <a href="#">
+                <!-- <a href="#"> -->
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
                             <div class="product-slider-shadow-box position-absolute"></div>
@@ -820,12 +847,12 @@
                         </div>
                     </div>
 
-                </a>
+                <!-- </a> -->
             </div>
 
 
             <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
-                <a href="#">
+                <!-- <a href="#"> -->
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
                             <div class="product-slider-shadow-box position-absolute"></div>
@@ -845,12 +872,12 @@
                         </div>
                     </div>
 
-                </a>
+                <!-- </a> -->
             </div>
 
 
             <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
-                <a href="#">
+                <!-- <a href="#"> -->
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
                             <div class="product-slider-shadow-box position-absolute"></div>
@@ -870,12 +897,12 @@
                         </div>
                     </div>
 
-                </a>
+                <!-- </a> -->
             </div>
 
 
             <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
-                <a href="#">
+                <!-- <a href="#"> -->
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
                             <div class="product-slider-shadow-box position-absolute"></div>
@@ -895,12 +922,12 @@
                         </div>
                     </div>
 
-                </a>
+                <!-- </a> -->
             </div>
 
 
             <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
-                <a href="#">
+                <!-- <a href="#"> -->
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
                             <div class="product-slider-shadow-box position-absolute"></div>
@@ -920,12 +947,12 @@
                         </div>
                     </div>
 
-                </a>
+                <!-- </a> -->
             </div>
 
 
             <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
-                <a href="#">
+                <!-- <a href="#"> -->
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
                             <div class="product-slider-shadow-box position-absolute"></div>
@@ -945,12 +972,12 @@
                         </div>
                     </div>
 
-                </a>
+                <!-- </a> -->
             </div>
 
 
             <div class="p-2 ps-md-3 col-md-3 col-sm-4 col-6  top-product-boxes">
-                <a href="#">
+                <!-- <a href="#"> -->
                     <div class="card h-100 product-tab-card">
                         <div class="product-images-box position-relative   overflow-hidden">
                             <div class="product-slider-shadow-box position-absolute"></div>
@@ -970,7 +997,7 @@
                         </div>
                     </div>
 
-                </a>
+                <!-- </a> -->
             </div>
 
         </div>

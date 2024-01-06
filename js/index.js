@@ -72,12 +72,47 @@ tabGroup.forEach((eachTabs) => {
 // for the items preview box
 
 let allItemsPreviewbox = document.querySelectorAll('.product-slider-preview-box');
+
+let itemsPreviewModalContainer = document.querySelector('.items-preview-modal-container');
+let previewModalBtn = document.querySelector('#preview-modal-btn');
+
+
+let modalPreviewImg = document.querySelector('.product-preview-image-box img');
+let modalPreviewName = document.querySelector('.product-preview-name');
+let modalPreviewNPrice = document.querySelector('.product-preview-price p');
+let modalPreviewNAddBtn = document.querySelector('.product-preview-add-cart-btn');
+
+previewModalBtn.addEventListener('click', function(){
+    itemsPreviewModalContainer.style= 'display:none;'
+});
+
+
+
+
+
+
+
 // console.log(allItemsPreviewbox);
 
 for(let i = 0; i <allItemsPreviewbox.length; i++){
    let allItemsPreviewboxParent = allItemsPreviewbox[i].parentElement;
-   console.log(allItemsPreviewboxParent);
-}
+   let allItemsPreviewB= allItemsPreviewbox[i];
+
+
+   allItemsPreviewB.addEventListener('click', function(){
+
+    // console.log(allItemsPreviewboxParent.nextElementSibling.children[2].outerHTML);
+
+       modalPreviewImg.src = allItemsPreviewboxParent.querySelector('img').src
+       modalPreviewName.innerHTML = allItemsPreviewboxParent.nextElementSibling.children[0].outerHTML;
+       modalPreviewNPrice.innerText = allItemsPreviewboxParent.nextElementSibling.children[1].innerText.slice(4).trim();
+       modalPreviewNAddBtn.innerHTML= allItemsPreviewboxParent.nextElementSibling.children[2].outerHTML
+
+       itemsPreviewModalContainer.style= 'display:block;'
+});
+
+
+};
 
 
 
