@@ -2,13 +2,32 @@
 //For the items cart...................
 const itemsBtnBox = document.querySelector(".items-cart-btn");
 const itemBox = document.querySelector(".items-cart-container");
-itemsBtnBox.addEventListener("click", onclickItems => {
-    itemBox.style = "display: block; !importent";
+
+function onclickItems() {
+    itemBox.style.display= 'block';
     const itemsCloseIcn = document.querySelector(".items-cart-close-icn")
     itemsCloseIcn.addEventListener("click", (f) => {
-        itemBox.style = "";
+        itemBox.style.display = 'none'
     });
-});
+};
+
+itemsBtnBox.addEventListener("click", onclickItems);
+
+let btnProduct= document.querySelectorAll('.product-card-button')
+    btnProduct.forEach(e=>{
+        e.addEventListener('click', onclickItems)
+    });
+
+// itemsBtnBox.addEventListener("click", onclickItems => {
+//     itemBox.style = "display: block; !importent";
+//     const itemsCloseIcn = document.querySelector(".items-cart-close-icn")
+//     itemsCloseIcn.addEventListener("click", (f) => {
+//         itemBox.style = "";
+//     });
+// });
+// console.log(btnProduct);
+
+
 
 
 
@@ -22,7 +41,7 @@ searchModal.addEventListener("click", onclickSearch => {
 
     document.addEventListener("click", (f) => {
         if (f.target === userSearch && f.target !== userSearch.children[0]) {
-        userSearch.style = "";
+            userSearch.style = "";
         }
     });
 });
@@ -82,8 +101,8 @@ let modalPreviewName = document.querySelector('.product-preview-name');
 let modalPreviewNPrice = document.querySelector('.product-preview-price p');
 let modalPreviewNAddBtn = document.querySelector('.product-preview-add-cart-btn');
 
-previewModalBtn.addEventListener('click', function(){
-    itemsPreviewModalContainer.style= 'display:none;'
+previewModalBtn.addEventListener('click', function () {
+    itemsPreviewModalContainer.style = 'display:none;'
 });
 
 
@@ -94,22 +113,22 @@ previewModalBtn.addEventListener('click', function(){
 
 // console.log(allItemsPreviewbox);
 
-for(let i = 0; i <allItemsPreviewbox.length; i++){
-   let allItemsPreviewboxParent = allItemsPreviewbox[i].parentElement;
-   let allItemsPreviewB= allItemsPreviewbox[i];
+for (let i = 0; i < allItemsPreviewbox.length; i++) {
+    let allItemsPreviewboxParent = allItemsPreviewbox[i].parentElement;
+    let allItemsPreviewB = allItemsPreviewbox[i];
 
 
-   allItemsPreviewB.addEventListener('click', function(){
+    allItemsPreviewB.addEventListener('click', function () {
 
-    // console.log(allItemsPreviewboxParent.nextElementSibling.children[2].outerHTML);
+        // console.log(allItemsPreviewboxParent.nextElementSibling.children[2].outerHTML);
 
-       modalPreviewImg.src = allItemsPreviewboxParent.querySelector('img').src
-       modalPreviewName.innerHTML = allItemsPreviewboxParent.nextElementSibling.children[0].outerHTML;
-       modalPreviewNPrice.innerText = allItemsPreviewboxParent.nextElementSibling.children[1].innerText.slice(4).trim();
-       modalPreviewNAddBtn.innerHTML= allItemsPreviewboxParent.nextElementSibling.children[2].outerHTML
+        modalPreviewImg.src = allItemsPreviewboxParent.querySelector('img').src
+        modalPreviewName.innerHTML = allItemsPreviewboxParent.nextElementSibling.children[0].outerHTML;
+        modalPreviewNPrice.innerText = allItemsPreviewboxParent.nextElementSibling.children[1].innerText.slice(4).trim();
+        modalPreviewNAddBtn.innerHTML = allItemsPreviewboxParent.nextElementSibling.children[2].outerHTML
 
-       itemsPreviewModalContainer.style= 'display:block;'
-});
+        itemsPreviewModalContainer.style = 'display:block;'
+    });
 
 
 };
@@ -127,7 +146,7 @@ window.addEventListener('scroll', function () {
     let header = document.querySelector('.site-navigation-header');
     header.classList.toggle('sticky', window.scrollY > 125);
     let headerTexts = document.querySelectorAll('.nav-navigation-text');
-    headerTexts.forEach(function(e){
+    headerTexts.forEach(function (e) {
         e.classList.toggle('sticky', window.scrollY > 125);
     });
 });

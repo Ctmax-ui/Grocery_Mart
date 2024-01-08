@@ -18,6 +18,10 @@
     --bg-light: #fafafb;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .all-modal-container {
     width: 100%;
     height: 100%;
@@ -277,6 +281,30 @@
     color: #ffc400 !important;
 }
 
+
+/* go to top section */
+.go-to-top-box{
+    right: 4%;
+    bottom: 5%;
+    z-index: 99999999999;
+    width: auto;
+    height: auto;
+}
+.go-to-top-box a{
+    display: block;
+    background-color: #ed174a;
+    color: #ffffff;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.go-to-top-box a:hover{
+    background: #3c43a4;
+}
 
 
 /*-------------------- header start here ---------------------------*/
@@ -1125,7 +1153,7 @@ header {
     top: -50%;
     transform: translateX(-50%);
     transition: all .2s ease-in;
-    z-index: 999999;
+    z-index: 99999;
     cursor: pointer;
 }
 
